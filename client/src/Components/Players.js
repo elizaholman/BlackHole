@@ -18,33 +18,6 @@ const Players = ({players, deletePlayer, addPlayer}) => {
     setName("");
   }
 
-  // const [newPlayer, setNewPlayer] = useState(  {
-  //   name: "",
-  //   active: false,
-  //   wins: 0,
-  //   losses: 0
-  // })
-
-  // const handleOnChange = (event) => {
-  //   const formData = Object.assign({}, newPlayer);
-  //   formData[event.target.name] = event.target.value;
-  //   setNewPlayer(formData);
-  //   };
-
-//     const handleSubmit = (event) =>{
-//       event.preventDefault();
-//       postPlayer(formData)
-//       .then((data)=>{
-//           addPlayer(data);
-//       })
-//       setFormData({
-//         name: "",
-//         active: false,
-//         wins: 0,
-//         losses: 0
-//     });
-// }
-
   const allPlayers = players.map((player, index) => {
     return <PlayerDetails key={index} player={player} deletePlayer={deletePlayer}/>
   });
