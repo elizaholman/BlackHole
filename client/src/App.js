@@ -23,7 +23,7 @@ function App() {
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/players" element={<Players />} />
+          <Route path="/players" element={<Players players={players}/>} />
           <Route path="/game" element={<GameContainer />} />
           <Route path="/scoreboard" element={<Scoreboard players={players} />} />
         </Routes>
