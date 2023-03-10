@@ -19,6 +19,7 @@ function App() {
 
   const deletePlayer = playerToDelete => {
     PlayerService.deletePlayer(playerToDelete);
+    setPlayers(players.filter(player => player._id !== playerToDelete))
   }
 
   return (
