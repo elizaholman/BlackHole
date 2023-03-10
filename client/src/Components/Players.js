@@ -1,15 +1,60 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
+import PlayerDetails from './PlayerDetails';
 
-const Players = ({players}) => {
+const Players = ({players, deletePlayer, addPlayer}) => {
+
+  const [name, setName] = useState("");
+
+  const handleNameChange = (event) => setName(event.target.value);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    addPlayer({
+      name: name,
+      active: false,
+      wins: 0,
+      losses: 0
+    });
+    setName("");
+  }
+
+  // const [newPlayer, setNewPlayer] = useState(  {
+  //   name: "",
+  //   active: false,
+  //   wins: 0,
+  //   losses: 0
+  // })
+
+  // const handleOnChange = (event) => {
+  //   const formData = Object.assign({}, newPlayer);
+  //   formData[event.target.name] = event.target.value;
+  //   setNewPlayer(formData);
+  //   };
+
+//     const handleSubmit = (event) =>{
+//       event.preventDefault();
+//       postPlayer(formData)
+//       .then((data)=>{
+//           addPlayer(data);
+//       })
+//       setFormData({
+//         name: "",
+//         active: false,
+//         wins: 0,
+//         losses: 0
+//     });
+// }
 
   const allPlayers = players.map((player, index) => {
-    return <li key={index}>{player.name}</li>
-  })
+    return <PlayerDetails key={index} player={player} deletePlayer={deletePlayer}/>
+  });
   
   return (
     <div>
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2>Add New Player:</h2>
+      <input onChange={handleNameChange} type='text' name="name" value={name}></input>
+      <input type="submit" name="submit" value="Add Player"/>
     </form>
         <h2>Existing Players:</h2>
         <ul>

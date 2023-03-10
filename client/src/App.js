@@ -17,13 +17,23 @@ function App() {
       .then(players => setPlayers(players));
   }, []);
 
+  const deletePlayer = playerToDelete => {
+    PlayerService.deletePlayer(playerToDelete);
+    setPlayers(players.filter(player => player._id !== playerToDelete))
+  }
+
+  const addPlayer = newPlayer => {
+    PlayerService.addPlayer(newPlayer)
+      .then(savedPlayer => setPlayers([ ...players, savedPlayer ]));
+  };
+
   return (
     <div className="App">
       <Router>
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/players" element={<Players players={players}/>} />
+          <Route path="/players" element={<Players players={players} deletePlayer={deletePlayer} addPlayer={addPlayer}/>} />
           <Route path="/game" element={<GameContainer />} />
           <Route path="/scoreboard" element={<Scoreboard players={players} />} />
         </Routes>
