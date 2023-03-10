@@ -4,7 +4,7 @@ import Rules from './Rules'
 const Home = () => {
   return (
     <div>
-    <h1>Rules</h1>
+      <h1>Rules</h1>
       <Rules/>
     </div>
   )
