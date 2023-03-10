@@ -1,6 +1,7 @@
 const baseURL = 'http://localhost:9000/api/players/';
 
 const PlayerService =  {
+
   getPlayers() {
     return fetch(baseURL)
       .then(res => res.json());
@@ -33,4 +34,7 @@ const PlayerService =  {
       method: 'DELETE'
     });
   }
+
 };
+
+export default PlayerService;
