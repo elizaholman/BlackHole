@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import PlayerDetails from './PlayerDetails';
 
-const Players = ({players}) => {
+const Players = ({players, deletePlayer}) => {
 
   const allPlayers = players.map((player, index) => {
-    return <li key={index}>{player.name}</li>
-  })
+    return <PlayerDetails key={index} player={player} deletePlayer={deletePlayer}/>
+  });
   
   return (
     <div>
