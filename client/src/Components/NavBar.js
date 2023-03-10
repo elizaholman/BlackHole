@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Dice = () => {
+const NavBar = () => {
   return (
     <div>
-      <h4>Dice</h4>
+      
     </div>
   )
 }
 
-export default Dice
+export default NavBar
