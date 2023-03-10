@@ -4,9 +4,19 @@ import Players from './Components/Players';
 import Scoreboard from './Components/Scoreboard';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
+import PlayerService from './services/PlayersService';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [players, setPlayers] = useState([])
+
+  useEffect(() => {
+    PlayerService.getPlayers()
+      .then(players => setPlayers(players));
+  }, []);
+
   return (
     <div className="App">
       <Router>
