@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import OptionItem from './OptionItem'
 import Game from './Game'
 
 const PlayerSelect = ({diceRoll, position, positionRender, tile, players}) => {
@@ -10,11 +11,12 @@ const PlayerSelect = ({diceRoll, position, positionRender, tile, players}) => {
 
 
   const playerSelect_1 = players.map((player,index) => {
-    return <option key={index}>{player.name}</option>
+
+    return <OptionItem  key={index} player={player}/>
   })
 
   const playerSelect_2 = players.map((player,index) => {
-    return <option key={index}>{player.name}</option>
+    return <OptionItem key={index} player={player} />
   })
 
   const handleSelectPlayer1 = (event) => {
