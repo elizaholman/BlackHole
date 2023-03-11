@@ -1,0 +1,24 @@
+.tile {
+    border:1px solid black;
+    margin:0;
+    width:75px;
+    height:75px;
+    background-color: blue;
+   
+}
+
+.playerOne{
+    border:1px solid black;
+    margin:0;
+    width:75px;
+    height:75px;
+    background-color: red;
+}
+
+
+.tiles{
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
+    justify-content: center;
+}
