@@ -2,32 +2,19 @@ import React from 'react'
 import Dice from './Dice' 
 import "./Game.css"
 
-const Game = ({diceRoll, position, positionRender, tile}) => {
+const Game = ({diceRoll, position, positionRender, tile, player1, player2}) => {
 
  
   
   let divs = document.getElementsByClassName("tile");
-  // console.log(divs)
 
-// for (let div of divs){
-//   if (div.id == (`_${position}`)){
-//     div.className = "playerOne"
-//   } else if (!div.id == (`_${position}`))
-//   {tile = "tile"}
-// }
-
-
-  // for (let div of divs){
-  //   if (div.className === "playerOne"){
-  //     div.className = "tile"}}
-  
       for (let div of divs){ 
     if (div.id == (`_${position}`)){
           div.className = "playerOne"
   } 
-      }
+  }
 
-
+  // console.log(player1.wins)
 
 
 

@@ -2,7 +2,7 @@ import React, {useState , useEffect} from 'react'
 import PlayerSelect from '../Components/PlayerSelect'
 
 
-const GameContainer = () => {
+const GameContainer = ({players}) => {
    
   const [position, setPosition] = useState()
   const [tile , setTile] = useState()
@@ -51,7 +51,7 @@ const positionRender =((position, divs) => {
   return (
     <div>
       <h1>Portals</h1>
-      <PlayerSelect diceRoll={diceRoll} position={position} positionRender={positionRender} tile={tile}/>
+      <PlayerSelect  players={players} diceRoll={diceRoll} position={position} positionRender={positionRender} tile={tile}/>
     </div>
   )
 }
