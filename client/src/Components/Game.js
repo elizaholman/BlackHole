@@ -3,14 +3,16 @@ import Dice from './Dice'
 import "./Game.css"
 
 const Game = () => {
-  const position = 100
+  const position = 99
   let tile = "tile"
   let divs = document.getElementsByClassName("tile");
-  console.log(divs)
+  // console.log(divs)
 
-  // if( ("_"+position) == id ){
-  //   tile = "player_1"
-  // }
+for (let div of divs){
+  if (div.id == (`_${position}`)){
+    div.className = "playerOne"
+  }
+}
 
 
   return (
