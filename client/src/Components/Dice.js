@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dice = ({diceRoll, position}) => {
+const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2}) => {
 
   const portals = [
     {entrance:25,exit:9},
@@ -11,8 +11,12 @@ const Dice = ({diceRoll, position}) => {
     {entrance:50,exit:74}
 ]
   const handleDiceRoll= () => {
-    diceRoll(position, portals)
+    if (test1.active === true){
+    diceRoll1(position1, portals)}
+  else if (test2.active === true){
+    diceRoll2(position2, portals)
   }
+}
   return (
     <div>
       <button onClick={handleDiceRoll}> Dice</button>
