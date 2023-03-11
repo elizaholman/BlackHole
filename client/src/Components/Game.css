@@ -8,12 +8,34 @@
 }
 
 .playerOne{
+    background-color: red;
     border:1px solid black;
     margin:0;
     width:75px;
     height:75px;
-    background-color: red;
+    clip-path: circle(closest-side at 15px 15px);
+    
 }
+
+.playerTwo{
+    background-color: blue;
+    border:1px solid black;
+    margin:0;
+    width:75px;
+    height:75px;
+    clip-path: circle(20% at 15px 80%);
+    
+}
+
+.bothInSquare{
+    background-color: red;
+    border:1px solid black;
+    margin:0;
+    width:75px;
+    height:75px;
+    
+}
+
 
 
 .tiles{
