@@ -34,7 +34,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<Players players={players} deletePlayer={deletePlayer} addPlayer={addPlayer}/>} />
-          <Route path="/game" element={<GameContainer />} />
+          <Route path="/game" element={<GameContainer players={players}/>} />
           <Route path="/scoreboard" element={<Scoreboard players={players} />} />
         </Routes>
       </Router>
