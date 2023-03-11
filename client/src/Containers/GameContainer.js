@@ -7,23 +7,16 @@ const GameContainer = () => {
   const [position, setPosition] = useState(1)
 
   useEffect(() => {
-    setPosition()
+    setPosition(1)
   }, [])
-  const portals = [
-    {entrance:25,exit:9},
-    {entrance:76,exit:46},
-    {entrance:93,exit:75},
-    {entrance:6,exit:40},
-    {entrance:12,exit:30},
-    {entrance:50,exit:74}
-]
 
-function diceRoll(diceSize){
+
+function dice(diceSize){
   const randomNumber = Math.floor(Math.random()* diceSize)+1;
   return randomNumber
 }
-function portal_test(position, portal){
-  position += diceRoll(6)
+function diceRoll(position, portals){
+  position += dice(6)
   for (const portal of portals){
       if(position === portal.entrance){
           position = portal.exit}
@@ -36,7 +29,7 @@ function portal_test(position, portal){
   return (
     <div>
       <h1>Portals</h1>
-      <PlayerSelect/>
+      <PlayerSelect diceRoll={diceRoll} position={position}/>
     </div>
   )
 }

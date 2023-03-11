@@ -2,9 +2,9 @@ import React from 'react'
 import Dice from './Dice' 
 import "./Game.css"
 
-const Game = ({diceRoll}) => {
+const Game = ({diceRoll, position}) => {
 
-  const position = 42
+ 
   let tile = "tile"
   let divs = document.getElementsByClassName("tile");
   // console.log(divs)
@@ -22,8 +22,8 @@ for (let div of divs){
     <h2>You Lost The Game</h2>
     <div className="tiles">
       
-      <div className={tile} id="_100" player1={position}></div>
-      <div className={tile} id="_99" player1={position}></div>
+      <div className={tile} id="_100"></div>
+      <div className={tile} id="_99"></div>
       <div className={tile} id="_98"></div>
       <div className={tile} id="_97"></div>
       <div className={tile} id="_96"></div>
@@ -125,7 +125,7 @@ for (let div of divs){
 
      
     </div>
-    <Dice/>
+    <Dice diceRoll={diceRoll} position={position}/>
     </div>
   )
 }
