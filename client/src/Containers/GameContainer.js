@@ -4,54 +4,59 @@ import PlayerSelect from '../Components/PlayerSelect'
 
 const GameContainer = ({players}) => {
    
-  const [position, setPosition] = useState()
-  const [tile , setTile] = useState()
+  // const [position, setPosition] = useState()
+  // const [tile , setTile] = useState()
 
-  useEffect(() => {
-    setPosition(1)
-    setTile("tile")
-  }, [])
+  // useEffect(() => {
+  //   setPosition(1)
+  //   setTile("tile")
+  // }, [])
 
   // useEffect(() => {
   //   setTile("tile")
   // },[diceRoll])
 
 
-function dice(diceSize){
-  const randomNumber = Math.floor(Math.random()* diceSize)+1;
-  return randomNumber
-}
+// function dice(diceSize){
+//   const randomNumber = Math.floor(Math.random()* diceSize)+1;
+//   return randomNumber
+// }
 
-function diceRoll(position, portals){
-  position += dice(6)
-  for (const portal of portals){
-      if(position === portal.entrance){
-          position = portal.exit}
-  } 
-  setTile("tile")
-  setPosition(position)
-  //player 1 turn = false/ player 2 turn true
+// function
+// const diceRoll = 0
 
-  return position
-}
+// (position, portals){
+//   setTile("tile")
+//   position += dice(6)
+//   for (const portal of portals){
+//       if(position === portal.entrance){
+//           position = portal.exit}
+//   } 
+//   setTile("tile")
+//   setPosition(position)
+//   //player 1 turn = false/ player 2 turn true
 
-const positionRender =((position, divs) => {
+//   return position
+// }
 
-  for (let div of divs){
-    if (div.className === "playerOne"){
-      div.className = "tile"}}
+// const positionRender= 0;
+//  =((position, divs) => {
+
+//   for (let div of divs){
+//     if (div.className === "playerOne"){
+//       div.className = "tile"}}
   
-      for (let div of divs){ 
-    if (div.id == (`_${position}`)){
-          div.className = "playerOne"
-  }
-  }})
+//       for (let div of divs){ 
+//     if (div.id == (`_${position}`)){
+//           div.className = "playerOne"
+//   }
+//   }})
 
 
   return (
     <div>
       <h1>Portals</h1>
-      <PlayerSelect  players={players} diceRoll={diceRoll} position={position} positionRender={positionRender} tile={tile}/>
+      <PlayerSelect  players={players} />
     </div>
   )
 }

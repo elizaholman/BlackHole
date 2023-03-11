@@ -1,22 +1,93 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Dice from './Dice' 
 import "./Game.css"
 
-const Game = ({diceRoll, position, positionRender, tile, player1, player2}) => {
+const Game = ({ player1, player2}) => {
+  const [oldPosition, setOldPosition] = useState()
+  const [position, setPosition] = useState()
+  const [tile , setTile] = useState()
+  
 
- 
+
+  useEffect(() => {
+    setPosition(1)
+    positionRender(1)
+    setOldPosition(1)
+    setTile("tile")
+  }, [])
+
+  useEffect(() => {
+    oldPositionRender()
+    for ( let div of divs){ 
+      if (div.className = "playerOne"){
+          div.className = tile
+      }}
+    positionRender(position)
+
+  },[diceRoll])
+
+
   
   let divs = document.getElementsByClassName("tile");
 
+
+function dice(diceSize){
+  const randomNumber = Math.floor(Math.random()* diceSize)+1;
+  return randomNumber
+}
+
+function diceRoll(position, portals , divs){
+ setOldPosition(position)
+
+
+  // setTile("tile")
+  position += dice(6)
+  for (const portal of portals){
+      if(position === portal.entrance){
+          position = portal.exit}
+  } 
+
+  setPosition(position)
+  //player 1 turn = false/ player 2 turn true
+  // positionRender(position)
+  return position
+}
+
+const positionRender =((position) => {
+
+  
       for (let div of divs){ 
     if (div.id == (`_${position}`)){
-          div.className = "playerOne"
-  } 
+          div.className = "playerOne"}
+   
   }
+ 
+})
+
+
+  //     for (let div of divs){ 
+  //   if (div.id == (`_${position}`)){
+  //         div.className = "playerOne"
+  // } 
+  // }
 
   // console.log(player1.wins)
 
+  const oldPositionRender = () => {
 
+    const test =document.getElementsByClassName("playerOne")
+
+    for ( let div of test){
+      div.className="tile"
+    }
+    // console.log(oldPosition)
+    // for (let div of divs){ 
+    //   if (div.id == (`_${oldPosition}`)){
+    //         div.className = "tile" 
+    //       console.log(div)}
+        
+    }
+  
 
 
   return (
