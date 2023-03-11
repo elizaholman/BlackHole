@@ -53,6 +53,12 @@ const Game = ({ player1, player2}) => {
 
   let divs = document.getElementsByClassName("tile");
 
+  let div1 = document.getElementsByClassName("playerOne");
+
+  let div2 = document.getElementsByClassName("PlayerTwo");
+
+
+
 function dice(diceSize){
   const randomNumber = Math.floor(Math.random()* diceSize)+1;
   return randomNumber
@@ -88,6 +94,12 @@ const positionRender1 =((position) => {
     if (div.id == (`_${position}`)){
           div.className = "playerOne"}
   }
+  for (let div of div2){ 
+    if (div.id == (`_${position}`)){
+          if(div.className = "playerTwo"){
+            div.className = "bothInSquare"}
+          }
+  }
 })
 
 const positionRender2 =((position) => {
@@ -95,6 +107,14 @@ const positionRender2 =((position) => {
 if (div.id == (`_${position}`)){
       div.className = "playerTwo"}
 }
+for (let div of div1){ 
+  if (div.id == (`_${position}`)){
+        if(div.className = "playerOne"){
+          div.className = "bothInSquare"}
+        }
+}
+
+
 })
 
 
