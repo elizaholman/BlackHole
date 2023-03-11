@@ -1,7 +1,7 @@
 import React from 'react'
 import Game from './Game'
 
-const PlayerSelect = () => {
+const PlayerSelect = ({diceRoll}) => {
   return (
     <div>
       <h2>Select a Player</h2>

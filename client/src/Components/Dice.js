@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Dice = () => {
+const Dice = ({diceRoll}) => {
+  const handleDiceRoll= () => {
+    diceRoll()
+  }
   return (
     <div>
-      <h4>Dice</h4>
+      <button onClick={handleDiceRoll}> Dice</button>
     </div>
   )
 }
