@@ -99,6 +99,7 @@
 .player-select{
   display:flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 
 .player1-select{
@@ -106,4 +107,10 @@
 }
 .player2-select{
   height:20px;
+}
+
+.players{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

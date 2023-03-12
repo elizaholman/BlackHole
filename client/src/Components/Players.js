@@ -23,7 +23,8 @@ const Players = ({players, deletePlayer, addPlayer}) => {
   });
   
   return (
-    <div>
+    <div className='players'>
+    <h1>Blackhole</h1>
     <form onSubmit={handleSubmit}>
       <h2>Add New Player:</h2>
       <input onChange={handleNameChange} type='text' name="name" value={name}></input>
