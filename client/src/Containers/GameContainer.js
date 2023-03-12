@@ -3,13 +3,11 @@ import PlayerSelect from '../Components/PlayerSelect'
 
 
 const GameContainer = ({players}) => {
-   
-  
 
   return (
-    <div>
-      <h1>Portals</h1>
-      <PlayerSelect  players={players} />
+    <div className='game-container'>
+      <h1>Blackhole</h1>
+      <PlayerSelect players={players} />
     </div>
   )
 }

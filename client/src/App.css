@@ -89,3 +89,21 @@
       }    
   }
 
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-select{
+  display:flex;
+  flex-direction: row;
+}
+
+.player1-select{
+  height:20px;
+}
+.player2-select{
+  height:20px;
+}

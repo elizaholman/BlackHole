@@ -42,9 +42,3 @@
     justify-content:center;
 }
 
-.gameboard{
-    display: flex;
-    justify-content: center;
-    border: solid white 2px;
-}
-
