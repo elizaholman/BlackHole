@@ -3,19 +3,19 @@ import {Link} from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <div>
-      <ul>
+    <div className='nav-bar'>
+      <ul className='nav-ul'>
         <li>
-          <Link to="/">Home</Link>
+          <Link className='nav-li' to="/">Home</Link>
         </li>
         <li>
-          <Link to="/players">Players</Link>
+          <Link className='nav-li' to="/players">Players</Link>
         </li>
         <li>
-          <Link to="/game">Play</Link>
+          <Link className='nav-li' to="/game">Play</Link>
         </li>
         <li>
-          <Link to="/scoreboard">Scoreboard</Link>
+          <Link className='nav-li' to="/scoreboard">Scoreboard</Link>
         </li>
       </ul>
     </div>
