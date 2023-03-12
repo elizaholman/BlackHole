@@ -26,6 +26,18 @@
   animation: flicker 1s infinite alternate;  
 }
 
+.rules{
+  align-self: end;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 20px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
 .title{
   background: #000000a4;
   font-style: italic;
@@ -73,6 +85,8 @@
 }
 
 .homepage{
+  padding-top: 5px;
+  width: 98%;
   display: flex;
   flex-direction: column;
   align-items: center;
