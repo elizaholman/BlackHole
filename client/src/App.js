@@ -30,13 +30,13 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<Players players={players} deletePlayer={deletePlayer} addPlayer={addPlayer}/>} />
           <Route path="/game" element={<GameContainer players={players}/>} />
           <Route path="/scoreboard" element={<Scoreboard players={players} />} />
         </Routes>
+        <NavBar/>
       </Router>
     </div>
   );
