@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Genos:wght@500&display=swap);
 
 .App {
-  /* background-image: url(./images/Blackhole.jpg);
+  background-image: url(./images/Blackhole.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,13 +9,16 @@
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: "Genos"; */
-  /* color: #fff; */
+  font-family: "Genos";
+  color: #fff;
 }
 
 .nav-bar{
-  padding-left: 20px;
-  padding-right: 20px;
+  position: fixed;
+  bottom: 2%;
+  width: 90%;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .nav-ul{
@@ -85,3 +88,4 @@
               inset 0 0 1rem var(--neon-border-color);
       }    
   }
+

@@ -34,8 +34,9 @@ const PlayerSelect = ({  players}) => {
 
   return (
     <div>
-      <h2>Select a Player</h2>
+      <Game player1={player1} player2={player2} />
 
+      <h2>Select a Player</h2>
 
       <select onChange={handleSelectPlayer1}>
         {playerSelect_1}
@@ -45,7 +46,6 @@ const PlayerSelect = ({  players}) => {
       {playerSelect_2}
       </select>
 
-      <Game player1={player1} player2={player2} />
     </div>
   )
 }

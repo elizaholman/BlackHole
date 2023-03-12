@@ -1,18 +1,17 @@
 .tile {
     border:1px solid black;
     margin:0;
-    width:75px;
-    height:75px;
+    width:70px;
+    height:70px;
     background-color: blue;
-   
 }
 
 .playerOne{
     background-color: red;
     border:1px solid black;
     margin:0;
-    width:75px;
-    height:75px;
+    width:70px;
+    height:70px;
     clip-path: circle(closest-side at 15px 15px);
     
 }
@@ -21,8 +20,8 @@
     background-color: blue;
     border:1px solid black;
     margin:0;
-    width:75px;
-    height:75px;
+    width:70px;
+    height:70px;
     clip-path: circle(20% at 15px 80%);
     
 }
@@ -31,16 +30,21 @@
     background-color: red;
     border:1px solid black;
     margin:0;
-    width:75px;
-    height:75px;
+    width:70px;
+    height:70px;
     
 }
 
-
-
 .tiles{
     display: grid;
-    grid-template-columns: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
-    grid-template-rows: 75px 75px 75px 75px 75px 75px 75px 75px 75px 75px;
-    justify-content: center;
+    grid-template-columns: repeat(10, 70px);
+    grid-template-rows: repeat(10, 70px);
+    justify-content:center;
 }
+
+.gameboard{
+    display: flex;
+    justify-content: center;
+    border: solid white 2px;
+}
+
