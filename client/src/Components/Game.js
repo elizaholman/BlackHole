@@ -104,17 +104,7 @@ const positionRender1 =((position) => {
           }
 }
 })
-//       for (let div of divs){ 
-//     if (div.id == (`_${position}`)){
-//           div.className = "playerOne"}
-//   }
-//   for (let div of div2){ 
-//     if (div.id == (`_${position}`)){
-//           if(div.className = "playerTwo"){
-//             div.className = "bothInSquare"}
-//           }
-//   }
-// })
+
 
 const positionRender2 =((position) => {
       for (let div of divs){ 
