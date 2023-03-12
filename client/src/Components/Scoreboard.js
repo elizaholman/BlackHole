@@ -9,6 +9,7 @@ const Scoreboard = ({players}) => {
 
   return (
     <div>
+      <h1 className='title'>Blackhole</h1>
       <table>
         <tr>
           <th>Name</th>

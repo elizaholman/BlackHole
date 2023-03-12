@@ -13,6 +13,30 @@
   color: #fff;
 }
 
+.homepage-title{
+  display: flex;
+  justify-content: center;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 50px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.title{
+  background: #000000a4;
+  font-style: italic;
+  font-size: 25px;
+  color:rgb(255, 214, 148);
+  padding: 10px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
 .nav-bar{
   position: fixed;
   bottom: 2%;
@@ -46,6 +70,56 @@
   text-decoration: none;
   color:rgb(255, 214, 148);
 }
+
+.homepage{
+  display: flex;
+  flex-direction: column;
+}
+
+.game-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-select{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  column-gap: 30px;
+}
+
+.player1-select{
+  text-align: center;
+  height:40px;
+  background: #000000a4;
+  font-style: italic;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.player2-select{
+  text-align: center;
+  height:40px;
+  background: #000000a4;
+  font-style: italic;
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.players{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 :root { 
   --neon-text-color: rgb(255, 157, 0);
@@ -89,28 +163,3 @@
       }    
   }
 
-.game-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.player-select{
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.player1-select{
-  height:20px;
-}
-.player2-select{
-  height:20px;
-}
-
-.players{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}

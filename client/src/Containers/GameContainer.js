@@ -6,7 +6,7 @@ const GameContainer = ({players}) => {
 
   return (
     <div className='game-container'>
-      <h1>Blackhole</h1>
+      <h1 className='title'>Blackhole</h1>
       <PlayerSelect players={players} />
     </div>
   )
