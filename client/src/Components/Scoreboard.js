@@ -8,15 +8,18 @@ const Scoreboard = ({players}) => {
   })
 
   return (
-    <div>
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Wins</th>
-          <th>Losses</th>
-        </tr>
-        {allPlayers}
-      </table>
+    <div className='scoreboard'>
+      <h1 className='title'>Blackhole</h1>
+      <div className='table-div'>
+        <table className='table'>
+          <tr className='table'>
+            <th className='table'>Name</th>
+            <th className='table'>Wins</th>
+            <th className='table'>Losses</th>
+          </tr>
+          {allPlayers}
+        </table>
+      </div>
     </div>
   )
 }

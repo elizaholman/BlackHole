@@ -27,25 +27,20 @@ const PlayerSelect = ({  players}) => {
     setPlayer2(event.target.value)
   }
 
-
-
-
-
-
   return (
-    <div>
-      <h2>Select a Player</h2>
+    <div className='player-select'>
 
-
-      <select onChange={handleSelectPlayer1}>
+      <select className="player1-select" onChange={handleSelectPlayer1}>
+        <option selected disabled hidden>Select Player 1</option>
         {playerSelect_1}
       </select>
 
-      <select onChange={handleSelectPlayer2}>
+      <Game player1={player1} player2={player2} />
+
+      <select className="player2-select" onChange={handleSelectPlayer2}>
+      <option selected disabled hidden>Select Player 2</option>
       {playerSelect_2}
       </select>
-
-      <Game player1={player1} player2={player2} />
     </div>
   )
 }
