@@ -57,6 +57,8 @@ const Game = ({ player1, player2}) => {
 
   let div2 = document.getElementsByClassName("PlayerTwo");
 
+  let div3 = document.getElementsByClassName("bothInSquare");
+
 
 
 function dice(diceSize){
