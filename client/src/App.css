@@ -93,16 +93,17 @@
 }
 
 .form-div{
-  padding-top: 30px;
+  padding-top: 115px;
 }
 
 .form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 670px;
   background: #000000a4;
   font-style: italic;
-  font-size: 15px;
+  font-size: 20px;
   color:rgb(255, 214, 148);
   padding: 0px 30px 30px 30px;
   border: 3px solid #fff;
@@ -131,10 +132,17 @@
   animation: flicker 1s infinite alternate;  
 }
 
+.existing-players-div-div{
+  padding-top: 30px;
+}
+
 .existing-players-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #000000a4;
   font-style: italic;
-  font-size: 15px;
+  font-size: 20px;
   color:rgb(255, 214, 148);
   padding: 0px 30px 30px 30px;
   border: 3px solid #fff;
@@ -149,15 +157,31 @@
 }
 
 .existing-players{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #000000a4;
   font-style: italic;
-  font-size: 15px;
+  font-size: 30px;
   color:rgb(255, 214, 148);
-  padding: 0px 30px 30px 30px;
+  padding: 20px;
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
   animation: flicker 1s infinite alternate;  
+}
+
+.delete-button{
+  align-self: end;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 10px;
+  color:rgb(255, 214, 148);
+  padding: 10px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;
 }
 
 .game-container{
