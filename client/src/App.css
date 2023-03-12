@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Genos:wght@500&display=swap);
 
 .App {
-  background-image: url(./images/Blackhole.jpg);
+  /* background-image: url(./images/Blackhole.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   width: 100vw;
   height: 100vh;
   margin: 0;
-  font-family: "Genos";
+  font-family: "Genos"; */
   /* color: #fff; */
 }
 

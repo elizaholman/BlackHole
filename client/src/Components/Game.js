@@ -30,7 +30,7 @@ const Game = ({ player1, player2}) => {
     setPosition1(1)
     setPosition2(1)
     positionRender1(1)
-
+    positionRender2(1)
     setTest1(Player1)
     setTest2(Player2)
   
@@ -92,28 +92,40 @@ function diceRoll2(position, portals){
 }
 
 const positionRender1 =((position) => {
-      for (let div of divs){ 
-    if (div.id == (`_${position}`)){
+  for (let div of divs){ 
+    if (div.id === (`_${position}`)){
           div.className = "playerOne"}
   }
-  for (let div of div2){ 
-    if (div.id == (`_${position}`)){
-          if(div.className = "playerTwo"){
+  const test =document.getElementsByClassName("playerTwo")
+  for (let div of test){ 
+    if (div.id === (`_${position}`)){
+          if(div.className === "playerTwo"){
             div.className = "bothInSquare"}
           }
-  }
+}
 })
+//       for (let div of divs){ 
+//     if (div.id == (`_${position}`)){
+//           div.className = "playerOne"}
+//   }
+//   for (let div of div2){ 
+//     if (div.id == (`_${position}`)){
+//           if(div.className = "playerTwo"){
+//             div.className = "bothInSquare"}
+//           }
+//   }
+// })
 
 const positionRender2 =((position) => {
-  for (let div of divs){ 
-if (div.id == (`_${position}`)){
-      div.className = "playerTwo"}
-}
-for (let div of div1){ 
-  if (div.id == (`_${position}`)){
-        if(div.className = "playerOne"){
-          div.className = "bothInSquare"}
-        }
+      for (let div of divs){ 
+    if (div.id === (`_${position}`)){
+          div.className = "playerTwo"}
+  }
+  for (let div of div1){ 
+    if (div.id === (`_${position}`)){
+          if(div.className === "playerOne"){
+            div.className = "bothInSquare"}
+          }
 }
 
 
@@ -125,14 +137,20 @@ for (let div of div1){
     const test =document.getElementsByClassName("playerOne")
     for ( let div of test){
       div.className="tile"
-    }    
+    }
+    for ( let div of div3){
+      div.className="playerTwo"
+    }
     }
     const oldPositionRender2 = () => {
 
       const test =document.getElementsByClassName("playerTwo")
       for ( let div of test){
         div.className="tile"
-      }    
+      }
+      for ( let div of div3){
+        div.className="playerOne"
+      }   
       }
 
 
