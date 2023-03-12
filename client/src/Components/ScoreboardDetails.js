@@ -5,9 +5,9 @@ const ScoreboardDetails = ({player}) => {
   return (
     <div>
       <tr>
-        <td>{player.name}</td>
-        <td>{player.wins}</td>
-        <td>{player.losses}</td>
+        <td className='table-item'>{player.name}</td>
+        <td className='table-item'>{player.wins}</td>
+        <td className='table-item'>{player.losses}</td>
       </tr>
     </div>
   )
