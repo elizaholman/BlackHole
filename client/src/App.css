@@ -92,6 +92,74 @@
   align-items: center;
 }
 
+.form-div{
+  padding-top: 30px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 15px;
+  color:rgb(255, 214, 148);
+  padding: 0px 30px 30px 30px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.input{
+  background: #000000a4;
+  font-style: italic;
+  font-size: 15px;
+  color:rgb(255, 214, 148);
+  padding: 10px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.input::placeholder{
+  font-style: italic;
+  font-size: 15px;
+  color:rgb(255, 214, 148);
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.existing-players-div{
+  background: #000000a4;
+  font-style: italic;
+  font-size: 15px;
+  color:rgb(255, 214, 148);
+  padding: 0px 30px 30px 30px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
+.existing-players-list{
+  display:flex;
+  column-gap: 20px;
+}
+
+.existing-players{
+  background: #000000a4;
+  font-style: italic;
+  font-size: 15px;
+  color:rgb(255, 214, 148);
+  padding: 0px 30px 30px 30px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+}
+
 .game-container{
   display: flex;
   flex-direction: column;

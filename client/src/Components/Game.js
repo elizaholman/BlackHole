@@ -25,7 +25,6 @@ const Game = ({ player1, player2}) => {
       "losses": 0
       }
 
-
   useEffect(() => {
     setPosition1(1)
     setPosition2(1)
@@ -33,23 +32,17 @@ const Game = ({ player1, player2}) => {
     positionRender2(1)
     setTest1(Player1)
     setTest2(Player2)
-  
-
   }, [])
 
   useEffect(() => {
     oldPositionRender1()
     positionRender1(position1)
-
   },[diceRoll1])
 
   useEffect(() => {
     oldPositionRender2()
     positionRender2(position2)
-
   },[diceRoll2])
-
-
 
   let divs = document.getElementsByClassName("tile");
 

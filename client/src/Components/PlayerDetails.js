@@ -8,7 +8,7 @@ const PlayerDetails = ({player, deletePlayer, index}) => {
 
   return (
     <div>
-      <li key={index}>
+      <li className='existing-players' key={index}>
         {player.name}
       </li>
       <button onClick={handleDeletePlayer}>Delete</button>
