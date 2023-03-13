@@ -1,5 +1,6 @@
 const express = require('express');
 const ObjectID = require('mongodb').ObjectID;
+const cors = require('cors');
 
 const createRouter = function (collection) {
   const router = express.Router();
