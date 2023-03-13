@@ -24,7 +24,7 @@ const Players = ({players, deletePlayer, addPlayer}) => {
   
   return (
     <div className='players'>
-    <h1 className='title'>Blackhole</h1>
+    <h1 className='title'>Black hole</h1>
 
     <div className='form-div'>
       <form className='form' onSubmit={handleSubmit}>

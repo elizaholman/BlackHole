@@ -5,7 +5,6 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
   margin: 0;
@@ -262,12 +261,6 @@
   padding:100px;
 }
 
-.gameboard{
-  display: flex;
-  flex-direction: row;
-
-}
-
 .dice{
   background: #000000a4;
   font-style: italic;
@@ -281,7 +274,9 @@
 }
 
 .dice-div{
-  align-self: start;
+  position: absolute;
+  top: 300px;
+  left: 150px;
 }
 
 :root { 
