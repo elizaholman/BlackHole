@@ -73,7 +73,7 @@ function dice(diceSize){
 
 function diceRoll1(position, portals){
   
-  const roll = dice(6)  
+  const roll = dice(2)  
   position += roll
   if(position > 100){
     position -= roll
@@ -89,7 +89,7 @@ function diceRoll1(position, portals){
 }
 function diceRoll2(position, portals){
 
-  const roll = dice(6)
+  const roll = dice(3)
   position += roll
   if(position > 100){
     position -= roll
