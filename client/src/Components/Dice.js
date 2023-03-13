@@ -19,7 +19,7 @@ const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2}) => {
 }
   return (
     <div>
-      <button onClick={handleDiceRoll}> Dice</button>
+      <button className='dice' onClick={handleDiceRoll}> Dice</button>
     </div>
   )
 }
