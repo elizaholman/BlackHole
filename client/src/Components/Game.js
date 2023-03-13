@@ -2,37 +2,63 @@ import React, {useState, useEffect} from 'react'
 import Dice from './Dice' 
 import "./Game.css"
 
-const Game = ({ player1, player2}) => {
+const Game = ({playerOneId, playerTwoId, players}) => {
 
   const [position1, setPosition1] = useState()
   const [position2, setPosition2] = useState()
-  const[test1, setTest1] = useState(null)
-  const[test2, setTest2] = useState(null)
+  const [test1, setTest1] = useState(null)
+  const [test2, setTest2] = useState(null)
 
-  const Player1 = {
-    "_id": "1",
-    "name": "test-name",
-    "active": true,
-    "wins": 0,
-    "losses": 0
-    }
 
-    const Player2 = {
-      "_id": "2",
-      "name": "test-name-2",
-      "active": false,
-      "wins": 0,
-      "losses": 0
+  const getPlayerOne = () => {
+    for(const player of players){
+      if(player._id === playerOneId){
+        player.active = true
+        setTest1(player)
       }
+    }
+  }
+
+  const getPlayerTwo = () => {
+    for(const player of players){
+      if(player._id === playerTwoId){
+        setTest2(player)
+      }
+    }
+  }
+
+  // const Player1 = {
+  //   "_id": "1",
+  //   "name": "test-name",
+  //   "active": true,
+  //   "wins": 0,
+  //   "losses": 0
+  //   }
+
+  //   const Player2 = {
+  //     "_id": "2",
+  //     "name": "test-name-2",
+  //     "active": false,
+  //     "wins": 0,
+  //     "losses": 0
+  //     }
 
   useEffect(() => {
     setPosition1(1)
     setPosition2(1)
     positionRender1(1)
     positionRender2(1)
-    setTest1(Player1)
-    setTest2(Player2)
+    // setTest1(Player1)
+    // setTest2(Player2)
   }, [])
+
+  useEffect(() => {
+    getPlayerOne()
+  }, [playerOneId])
+
+  useEffect(() => {
+    getPlayerTwo()
+  }, [playerTwoId])
 
   useEffect(() => {
     oldPositionRender1()

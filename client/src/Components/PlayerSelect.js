@@ -2,12 +2,10 @@ import React, {useState, useEffect} from 'react'
 import OptionItem from './OptionItem'
 import Game from './Game'
 
-const PlayerSelect = ({  players}) => {
+const PlayerSelect = ({ players }) => {
 
-  const [player1, setPlayer1] = useState([]) 
-  const [player2, setPlayer2] = useState([])
-
-
+  const [playerOneId, setPlayerOneId] = useState([]) 
+  const [playerTwoId, setPlayerTwoId] = useState([])
 
 
   const playerSelect_1 = players.map((player,index) => {
@@ -20,12 +18,13 @@ const PlayerSelect = ({  players}) => {
   })
 
   const handleSelectPlayer1 = (event) => {
-    setPlayer1(event.target.value)
+    setPlayerOneId(event.target.value)
   }
 
   const handleSelectPlayer2 = (event) => {
-    setPlayer2(event.target.value)
+    setPlayerTwoId(event.target.value)
   }
+
 
   return (
     <div className='player-select'>
@@ -35,7 +34,7 @@ const PlayerSelect = ({  players}) => {
         {playerSelect_1}
       </select>
 
-      <Game player1={player1} player2={player2} />
+      <Game playerOneId={playerOneId} playerTwoId={playerTwoId} players={players}/>
 
       <select className="player2-select" onChange={handleSelectPlayer2}>
       <option selected disabled hidden>Select Player 2</option>

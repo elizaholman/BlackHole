@@ -2,10 +2,8 @@ import React from 'react'
 
 const OptionItem = ({player, index}) => {
 
-
-
   return (
-    <option value={index}>{player.name}</option>
+    <option value={player._id}>{player.name}</option>
   )
 }
 
