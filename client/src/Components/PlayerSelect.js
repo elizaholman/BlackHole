@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import OptionItem from './OptionItem'
 import Game from './Game'
 
-const PlayerSelect = ({ players }) => {
+const PlayerSelect = ({ players, updateScore }) => {
 
   const [playerOneId, setPlayerOneId] = useState([]) 
   const [playerTwoId, setPlayerTwoId] = useState([])
@@ -34,7 +34,7 @@ const PlayerSelect = ({ players }) => {
         {playerSelect_1}
       </select>
 
-      <Game playerOneId={playerOneId} playerTwoId={playerTwoId} players={players}/>
+      <Game updateScore={updateScore} playerOneId={playerOneId} playerTwoId={playerTwoId} players={players}/>
 
       <select className="player2-select" onChange={handleSelectPlayer2}>
       <option selected disabled hidden>Select Player 2</option>

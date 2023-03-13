@@ -25,9 +25,16 @@ function App() {
   const addPlayer = newPlayer => {
     PlayerService.addPlayer(newPlayer)
       .then(savedPlayer => setPlayers([ ...players, savedPlayer ]));
-  };
+  }
+    
+  const updateScore = (playerWin, playerLose) => {
+      PlayerService.updatePlayer(playerWin)
+      PlayerService.updatePlayer(playerLose)
+    }
 
-  
+
+
+
 
   return (
     <div className="App">
@@ -35,7 +42,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/players" element={<Players players={players} deletePlayer={deletePlayer} addPlayer={addPlayer}/>} />
-          <Route path="/game" element={<GameContainer players={players}/>} />
+          <Route path="/game" element={<GameContainer players={players} updateScore={updateScore}/>} />
           <Route path="/scoreboard" element={<Scoreboard players={players} />} />
         </Routes>
         <NavBar/>

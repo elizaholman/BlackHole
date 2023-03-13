@@ -4,7 +4,7 @@ import "./Game.css"
 
 
 
-const Game = ({playerOneId, playerTwoId, players}) => {
+const Game = ({playerOneId, playerTwoId, players, updateScore}) => {
 
   const [position1, setPosition1] = useState()
   const [position2, setPosition2] = useState()
@@ -72,8 +72,8 @@ function dice(diceSize){
 }
 
 function diceRoll1(position, portals){
-  
-  const roll = dice(2)  
+
+  const roll = dice(6)  
   position += roll
   if(position > 100){
     position -= roll
@@ -104,11 +104,16 @@ function diceRoll2(position, portals){
   return position
 }
 
-const winScreen = () => {
-  // new Audio('https://www.epidemicsound.com/track/FoeV7YN1O6/')
-  console.log("Youve Won!!!!")
+const winScreen1 = () => {
+  updateScore(test1, test2)
+  console.log("Youve Won number 1!!!!")
+};
 
+const winScreen2 = () => {
+  updateScore(test2, test1)
+  console.log("Youve Won number 2!!!!")
 }
+
 
 const positionRender1 =((position) => {
   for (let div of divs){ 
@@ -125,10 +130,12 @@ const positionRender1 =((position) => {
   if( position === 100){
     test1.wins +=1
     test2.losses += 1
-    // setTest1(test1)
-    // setTest2(test2)
-    winScreen()
+    setTest1(test1)
+    setTest2(test2)
+    winScreen1()
   }
+  
+
 })
 
 
@@ -146,9 +153,9 @@ const positionRender2 =((position) => {
 if( position === 100){
   test2.wins +=1
   test1.losses += 1
-  // setTest1(test1)
-  // setTest2(test2)
-  winScreen()
+  setTest1(test1)
+  setTest2(test2)
+  winScreen2()
 }
 })
 
