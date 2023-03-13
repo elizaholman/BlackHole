@@ -66,14 +66,14 @@ const Game = ({playerOneId, playerTwoId, players, updateScore}) => {
 
 
 
-function dice(diceSize){
-  const randomNumber = Math.floor(Math.random()* diceSize)+1;
-  return randomNumber
-}
+// function dice(diceSize){
+//   const randomNumber = Math.floor(Math.random()* diceSize)+1;
+//   return randomNumber
+// }
 
-function diceRoll1(position, portals){
+function diceRoll1(position, portals, blackhole, roll){
 
-  const roll = dice(6)  
+  // const roll = dice(6)  
   position += roll
   if(position > 100){
     position -= roll
@@ -81,15 +81,20 @@ function diceRoll1(position, portals){
   for (const portal of portals){
       if(position === portal.entrance){
           position = portal.exit}
+  } 
+  for (const hole of blackhole){
+    if(position === hole.entrance){
+        position = hole.exit}
   } 
   setPosition1(position)
   test1.active = false
   test2.active = true
   return position
 }
-function diceRoll2(position, portals){
 
-  const roll = dice(3)
+function diceRoll2(position, portals, blackhole, roll){
+
+  // const roll = dice(3)
   position += roll
   if(position > 100){
     position -= roll
@@ -98,11 +103,17 @@ function diceRoll2(position, portals){
       if(position === portal.entrance){
           position = portal.exit}
   } 
+  for (const hole of blackhole){
+    if(position === hole.entrance){
+        position = hole.exit}
+  }
   setPosition2(position)
   test1.active = true
   test2.active = false
   return position
 }
+
+
 
 const winScreen1 = () => {
   updateScore(test1, test2)

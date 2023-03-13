@@ -1,9 +1,9 @@
 import React from 'react'
 
-const OptionItem = ({player, index}) => {
+const OptionItem = ({player}) => {
 
   return (
-    <option defaultValue={player._id}>{player.name}</option>
+    <option value={player._id}>{player.name}</option>
   )
 }
 
