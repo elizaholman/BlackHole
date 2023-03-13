@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import Dice from './Dice' 
 import "./Game.css"
 
+
+
 const Game = ({playerOneId, playerTwoId, players}) => {
 
   const [position1, setPosition1] = useState()
@@ -27,29 +29,13 @@ const Game = ({playerOneId, playerTwoId, players}) => {
     }
   }
 
-  // const Player1 = {
-  //   "_id": "1",
-  //   "name": "test-name",
-  //   "active": true,
-  //   "wins": 0,
-  //   "losses": 0
-  //   }
-
-  //   const Player2 = {
-  //     "_id": "2",
-  //     "name": "test-name-2",
-  //     "active": false,
-  //     "wins": 0,
-  //     "losses": 0
-  //     }
 
   useEffect(() => {
     setPosition1(1)
     setPosition2(1)
     positionRender1(1)
     positionRender2(1)
-    // setTest1(Player1)
-    // setTest2(Player2)
+   
   }, [])
 
   useEffect(() => {
@@ -86,8 +72,12 @@ function dice(diceSize){
 }
 
 function diceRoll1(position, portals){
-
-  position += dice(6)
+  
+  const roll = dice(6)  
+  position += roll
+  if(position > 100){
+    position -= roll
+  }
   for (const portal of portals){
       if(position === portal.entrance){
           position = portal.exit}
@@ -98,8 +88,12 @@ function diceRoll1(position, portals){
   return position
 }
 function diceRoll2(position, portals){
-  
-  position += dice(6)
+
+  const roll = dice(6)
+  position += roll
+  if(position > 100){
+    position -= roll
+  }
   for (const portal of portals){
       if(position === portal.entrance){
           position = portal.exit}
@@ -108,6 +102,12 @@ function diceRoll2(position, portals){
   test1.active = true
   test2.active = false
   return position
+}
+
+const winScreen = () => {
+  // new Audio('https://www.epidemicsound.com/track/FoeV7YN1O6/')
+  console.log("Youve Won!!!!")
+
 }
 
 const positionRender1 =((position) => {
@@ -122,6 +122,13 @@ const positionRender1 =((position) => {
             div.className = "bothInSquare"}
           }
 }
+  if( position === 100){
+    test1.wins +=1
+    test2.losses += 1
+    // setTest1(test1)
+    // setTest2(test2)
+    winScreen()
+  }
 })
 
 
@@ -136,7 +143,16 @@ const positionRender2 =((position) => {
             div.className = "bothInSquare"}
           }
 }
+if( position === 100){
+  test2.wins +=1
+  test1.losses += 1
+  // setTest1(test1)
+  // setTest2(test2)
+  winScreen()
+}
 })
+
+
 
 
   const oldPositionRender1 = () => {

@@ -27,6 +27,8 @@ function App() {
       .then(savedPlayer => setPlayers([ ...players, savedPlayer ]));
   };
 
+  
+
   return (
     <div className="App">
       <Router>
