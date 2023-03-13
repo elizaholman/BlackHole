@@ -1,44 +1,215 @@
 .tile {
-    border:1px solid black;
+    /* border:1px solid rgb(153, 0, 0); */
     margin:0;
-    width:70px;
-    height:70px;
-    background-color: blue;
+    width:83px;
+    height:62px;
 }
 
 .playerOne{
-    background-color: red;
     border:1px solid black;
+    background-color: red;
     margin:0;
-    width:70px;
+    width:100px;
     height:70px;
-    clip-path: circle(closest-side at 15px 15px);
+    clip-path: circle(15% at 40px 50%);
     
 }
 
 .playerTwo{
-    background-color: blue;
     border:1px solid black;
     margin:0;
-    width:70px;
+    width:100px;
     height:70px;
-    clip-path: circle(20% at 15px 80%);
+    clip-path: circle(15% at 40px 50%);
+    background-color: blue;
     
 }
 
 .bothInSquare{
-    background-color: red;
     border:1px solid black;
     margin:0;
-    width:70px;
+    width:100px;
     height:70px;
+    background-color: red;
     
 }
 
 .tiles{
+    background-image: url(../images/BlackholeBoard.jpg);
+    padding: 10px;
+    background-position: center;
+    background-size: cover;
     display: grid;
-    grid-template-columns: repeat(10, 70px);
-    grid-template-rows: repeat(10, 70px);
+    grid-template-columns: repeat(10, 83px);
+    grid-template-rows: repeat(10, 62px);
     justify-content:center;
 }
 
+#_96, #_95{
+    margin-top: 5px ;
+}
+
+#_85, #_86 {
+    margin-top: 15px;
+}
+
+#_75, #_76{
+    margin-top: 25px;
+    width: 63px;
+    margin-left: 10px;
+}
+
+#_75{
+    margin-left:5px;
+}
+
+#_56, #_55, #_45, #_46{
+    width: 60px;
+    height: 50px;
+}
+
+#_45, #_56{
+    margin-left: 15px;
+}
+
+#_46, #_55{
+    margin-right: 15px;
+}
+
+#_56, #_55{
+    margin-top: 10px;
+}
+
+#_84{
+    margin-left: 10px;
+}
+
+#_84, #_87{
+    margin-top: 10px;
+    width: 75px;
+}
+
+#_77{
+    margin-top: 20px;
+    height: 55px;
+    width: 70px;
+}
+
+#_77{
+    margin-left: 15px;
+}
+
+#_74{
+    margin-top: 15px;
+    width: 70px;
+    margin-right: 20px;
+}
+
+#_65, #_66{
+    margin-top: 25px;
+    width: 55px;
+    height: 50px;
+}
+
+#_65{
+    margin-left: 20px;
+}
+
+#_78{
+    width: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#_67{
+    margin-top: 20px;
+    width: 70px;
+    margin-right: 20px;
+}
+
+#_64{
+    margin-top: 20px;
+    width: 70px;
+    height:55px;
+    margin-left: 25px;
+}
+
+#_63{
+    margin-top: 10px;
+    width: 90px;
+    height:60px;
+    margin-left: 10px;
+}
+
+#_35{
+    height: 45px;
+    margin-bottom: 20px;
+}
+
+#_44{
+    width: 70px;
+    height: 50px;
+    margin-left: 25px;
+}
+
+#_57{
+    width: 70px;
+    height: 50px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#_58{
+    width: 90px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#_43{
+    width: 90px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+#_38{
+    width: 90px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#_36{
+    width: 65px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+#_37{
+    width: 75px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+#_23{
+    width: 90px;
+    height: 55px;
+    margin-left: 5px;
+}
+
+#_24{
+    width: 80px;
+    height: 55px;
+    margin-left: 10px;
+}
+
+#_25{
+    width: 75px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+#_26{
+    width: 70px;
+    height: 50px;
+}
