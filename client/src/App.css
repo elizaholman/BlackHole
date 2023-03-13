@@ -262,6 +262,28 @@
   padding:100px;
 }
 
+.gameboard{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.dice{
+  background: #000000a4;
+  font-style: italic;
+  font-size: 10px;
+  color:rgb(255, 214, 148);
+  padding: 20px;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;
+}
+
+.dice-div{
+  align-self: start;
+}
+
 :root { 
   --neon-text-color: rgb(255, 157, 0);
   --neon-border-color: rgb(255, 157, 0);

@@ -163,6 +163,9 @@ const positionRender2 =((position) => {
 
   return (
     <div className="gameboard">
+    <div className='dice-div'>
+    <Dice diceRoll1={diceRoll1} diceRoll2={diceRoll2} position1={position1} position2={position2} test1={test1} test2={test2}/>
+    </div>
       <div className="tiles">
         <div className="tile" id="_100"></div>
         <div className="tile" id="_99"></div>
@@ -265,7 +268,6 @@ const positionRender2 =((position) => {
         <div className="tile" id="_9">EXIT</div>
         <div className="tile" id="_10"></div>
       </div>
-    <Dice diceRoll1={diceRoll1} diceRoll2={diceRoll2} position1={position1} position2={position2} test1={test1} test2={test2}/>
     </div>
   )
 }
