@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import DiceRollSound from '../AudioFiles/DiceRoll.mp3'
 
 const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2}) => {
 
@@ -36,6 +37,7 @@ function blackHoleRoll(){
 
 function rollNumber(){
   const randomNumber = Math.floor(Math.random()* 6)+1;
+  new Audio(DiceRollSound).play()
   setRoll(randomNumber)
   return randomNumber
 }

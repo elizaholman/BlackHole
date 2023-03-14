@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import Dice from './Dice' 
 import "./Game.css"
+import PortalSound from '../AudioFiles/PortalSound.mp3'
+import BlackholeSound from '../AudioFiles/SpaceWarp1.mp3'
 
 
 
@@ -35,7 +37,6 @@ const Game = ({playerOneId, playerTwoId, players, updateScore}) => {
     setPosition2(1)
     positionRender1(1)
     positionRender2(1)
-   
   }, [])
 
   useEffect(() => {
@@ -80,11 +81,15 @@ function diceRoll1(position, portals, blackhole, roll){
   }
   for (const portal of portals){
       if(position === portal.entrance){
-          position = portal.exit}
+          new Audio(PortalSound).play()
+          position = portal.exit
+        }
   } 
   for (const hole of blackhole){
     if(position === hole.entrance){
-        position = hole.exit}
+        new Audio(BlackholeSound).play()
+        position = hole.exit
+      }
   } 
   setPosition1(position)
   test1.active = false
@@ -101,11 +106,15 @@ function diceRoll2(position, portals, blackhole, roll){
   }
   for (const portal of portals){
       if(position === portal.entrance){
-          position = portal.exit}
+          new Audio(PortalSound).play()
+          position = portal.exit
+        }
   } 
   for (const hole of blackhole){
     if(position === hole.entrance){
-        position = hole.exit}
+        new Audio(BlackholeSound).play()
+        position = hole.exit
+      }
   }
   setPosition2(position)
   test1.active = true
