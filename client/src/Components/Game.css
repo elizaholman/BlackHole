@@ -8,7 +8,7 @@
     margin:0;
     width:83px;
     height:62px;
-    background-image: url(../images/Alien.png);
+    background-image: url(../images/Alien3.png);
     background-size: 45px;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -18,7 +18,7 @@
     margin:0;
     width:83px;
     height:62px;
-    background-image: url(../images/Astronaut.svg);
+    background-image: url(../images/Astronaut.png);
     background-size: 45px;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -29,7 +29,7 @@
     margin:0;
     width: 83px;
     height:62px;
-    background-image: url(../images/Both.svg);
+    background-image: url(../images/Both.png);
     background-size: 65px;
     background-repeat: no-repeat;
 }
