@@ -260,7 +260,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_56"> 
       {!showPopup1 ? <div className="title"><h1 >{test1.name} Wins!</h1>
       <a href="/game">
-        <button>Play Again</button>
+        <button className="delete-button" >Play Again</button>
       </a>
       </div> : null}
 
