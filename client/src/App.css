@@ -247,6 +247,11 @@
 }
 
 .table-item{
+  text-align: center;
+  width: 200px;
+}
+
+.table-item{
   background: #000000a4;
   font-style: italic;
   font-size: 25px;
