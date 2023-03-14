@@ -6,12 +6,12 @@ const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2}) => {
   const [roll, setRoll] = useState()
 
   const portals = [
-    {entrance:25,exit:9},
-    {entrance:76,exit:49},
-    {entrance:93,exit:75},
-    {entrance:6,exit:40},
-    {entrance:12,exit:30},
-    {entrance:50,exit:74}
+    {entrance:93,exit:59},
+    {entrance:76,exit:83},
+    {entrance:52,exit:40},
+    {entrance:25,exit:30},
+    {entrance:6,exit:18},
+    {entrance:420,exit:75}
 ]
 
   const blackhole = [
