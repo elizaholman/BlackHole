@@ -314,6 +314,7 @@
 }
 
 .table{
+  height: 500px;
   background: #000000a4;
   font-style: italic;
   font-size: 25px;
