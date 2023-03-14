@@ -277,13 +277,26 @@
   column-gap: 30px;
 }
 
-.player1-select{
+.player1-select-green{
   text-align: center;
   height:50px;
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:rgb(255, 214, 148);
+  color:Green;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+  font-size: 20px;
+}
+.player1-select-red{
+  text-align: center;
+  height:50px;
+  width:150px;
+  background: #000000a4;
+  font-style: italic;
+  color:red;
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
@@ -291,13 +304,27 @@
   font-size: 20px;
 }
 
-.player2-select{
+.player2-select-green{
   text-align: center;
   height:50px;
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:rgb(255, 214, 148);
+  color: green;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;  
+  font-size: 20px;
+}
+
+.player2-select-red{
+  text-align: center;
+  height:50px;
+  width:150px;
+  background: #000000a4;
+  font-style: italic;
+  color:red;
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;

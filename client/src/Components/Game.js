@@ -4,7 +4,7 @@ import "./Game.css";
 import PortalSound from "../AudioFiles/PortalSound.mp3";
 import BlackholeSound from "../AudioFiles/SpaceWarp1.mp3";
 
-const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2}) => {
+const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2, setPlayerTurn1, setPlayerTurn2}) => {
   const [position1, setPosition1] = useState(1);
   const [position2, setPosition2] = useState(1);
   const [test1, setTest1] = useState(null);
@@ -83,6 +83,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     setPosition1(position);
+    setPlayerTurn1("player2-select-red")
+    setPlayerTurn2("player2-select-green")
     test1.active = false;
     test2.active = true;
     return position;
@@ -107,6 +109,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     setPosition2(position);
+    setPlayerTurn2("player2-select-red")
+    setPlayerTurn1("player2-select-green")
     test1.active = true;
     test2.active = false;
     return position;
@@ -169,6 +173,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       test1.losses += 1;
       setTest1(test1);
       setTest2(test2);
+      
       winScreen2();
     }
   };
