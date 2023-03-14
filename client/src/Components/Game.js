@@ -222,7 +222,7 @@ if( position === 100){
         <div className="tile" id="_91"></div>
         <div className="tile" id="_81"></div>
         <div className="tile" id="_82"></div>
-        <div className="tile" id="_83"></div>
+        <div className="tile" id="_83">EXIT</div>
         <div className="tile" id="_84"></div>
         <div className="tile" id="_85"></div>
         <div className="tile" id="_86"></div>
@@ -236,7 +236,7 @@ if( position === 100){
         <div className="tile" id="_77"></div>
         <div className="tile" id="_76">ENTRANCE</div>
         <div className="tile" id="_75">EXIT</div>
-        <div className="tile" id="_74">EXIT</div>
+        <div className="tile" id="_74"></div>
         <div className="tile" id="_73"></div>
         <div className="tile" id="_72"></div>
         <div className="tile" id="_71"></div>
@@ -251,25 +251,25 @@ if( position === 100){
         <div className="tile" id="_69"></div>
         <div className="tile" id="_70"></div>
         <div className="tile" id="_60"></div>
-        <div className="tile" id="_59"></div>
+        <div className="tile" id="_59">EXIT</div>
         <div className="tile" id="_58"></div>
         <div className="tile" id="_57"></div>
         <div className="tile" id="_56"></div>
         <div className="tile" id="_55"></div>
         <div className="tile" id="_54"></div>
         <div className="tile" id="_53"></div>
-        <div className="tile" id="_52"></div>
+        <div className="tile" id="_52">ENTRANCE</div>
         <div className="tile" id="_51"></div>
         <div className="tile" id="_41"></div>
         <div className="tile" id="_42"></div>
         <div className="tile" id="_43"></div>
         <div className="tile" id="_44"></div>
         <div className="tile" id="_45"></div>
-        <div className="tile" id="_46">EXIT</div>
+        <div className="tile" id="_46"></div>
         <div className="tile" id="_47"></div>
         <div className="tile" id="_48"></div>
         <div className="tile" id="_49"></div>
-        <div className="tile" id="_50">ENTRANCE</div>
+        <div className="tile" id="_50"></div>
         <div className="tile" id="_40">EXIT</div>
         <div className="tile" id="_39"></div>
         <div className="tile" id="_38"></div>
@@ -292,13 +292,13 @@ if( position === 100){
         <div className="tile" id="_30">EXIT</div>
         <div className="tile" id="_20"></div>
         <div className="tile" id="_19"></div>
-        <div className="tile" id="_18"></div>
+        <div className="tile" id="_18">EXIT</div>
         <div className="tile" id="_17"></div>
         <div className="tile" id="_16"></div>
         <div className="tile" id="_15"></div>
         <div className="tile" id="_14"></div>
         <div className="tile" id="_13"></div>
-        <div className="tile" id="_12">ENTRANCE</div>
+        <div className="tile" id="_12"></div>
         <div className="tile" id="_11"></div>
         <div className="tile" id="_1"></div>
         <div className="tile" id="_2"></div>
@@ -308,7 +308,7 @@ if( position === 100){
         <div className="tile" id="_6">ENTRANCE</div>
         <div className="tile" id="_7"></div>
         <div className="tile" id="_8"></div>
-        <div className="tile" id="_9">EXIT</div>
+        <div className="tile" id="_9"></div>
         <div className="tile" id="_10"></div>
       </div>
     </div>
