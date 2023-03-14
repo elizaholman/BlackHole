@@ -261,7 +261,18 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_59"></div>
         <div className="tile" id="_58"></div>
         <div className="tile" id="_57"></div>
-        <div className="tile" id="_56"></div>
+        <div className="tile" id="_56"> 
+      {!showPopup1 ? <div className="title"><h1 >{test1.name} Wins!</h1>
+      <a href="/game">
+        <button>Play Again</button>
+      </a>
+      </div> : null}
+
+      {!showPopup2 ? <div className="title"><h1 >{test2.name} Wins!</h1>
+      <a href="/game">
+        <button className="delete-button">Play Again</button>
+      </a>
+      </div> : null}</div>
         <div className="tile" id="_55"></div>
         <div className="tile" id="_54"></div>
         <div className="tile" id="_53"></div>
@@ -271,6 +282,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_42"></div>
         <div className="tile" id="_43"></div>
         <div className="tile" id="_44"></div>
+      
         <div className="tile" id="_45"></div>
         <div className="tile" id="_46">
           EXIT
@@ -335,8 +347,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_10"></div>
       </div>
 
-      {!showPopup1 ? <div>{test1.name} Wins!</div> : null}
-      {!showPopup2 ? <div>{test2.name} Wins!</div> : null}
+     
     </div>
   );
 };
