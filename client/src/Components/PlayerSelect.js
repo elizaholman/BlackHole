@@ -6,6 +6,9 @@ const PlayerSelect = ({ players, updateScore }) => {
 
   const [playerOneId, setPlayerOneId] = useState([]) 
   const [playerTwoId, setPlayerTwoId] = useState([])
+  const [selectPlayer, setSelectPlayer] = useState(false);
+  const [selectPlayer2, setSelectPlayer2] = useState(false);
+
 
 
   const playerSelect_1 = players.map((player,index) => {
@@ -19,10 +22,14 @@ const PlayerSelect = ({ players, updateScore }) => {
 
   const handleSelectPlayer1 = (event) => {
     setPlayerOneId(event.target.value)
+    setSelectPlayer(true)
+    
   }
 
   const handleSelectPlayer2 = (event) => {
     setPlayerTwoId(event.target.value)
+    setSelectPlayer2(true)
+    
   }
 
 
@@ -34,7 +41,7 @@ const PlayerSelect = ({ players, updateScore }) => {
         {playerSelect_1}
       </select>
 
-      <Game updateScore={updateScore} playerOneId={playerOneId} playerTwoId={playerTwoId} players={players}/>
+      <Game selectPlayer2={selectPlayer2} selectPlayer={selectPlayer} updateScore={updateScore} playerOneId={playerOneId} playerTwoId={playerTwoId} players={players}/>
 
       <select className="player2-select" onChange={handleSelectPlayer2}>
       <option selected disabled hidden>Select Player 2</option>
