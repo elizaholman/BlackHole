@@ -5,32 +5,31 @@
 }
 
 .playerOne{
-    border:1px solid black;
-    background-color: red;
     margin:0;
     width:83px;
     height:62px;
-    clip-path: circle(15% at 40px 50%);
-    
+    background-image: url(../images/Alien.svg);
+    background-size: 45px;
+    background-repeat: no-repeat;
 }
 
 .playerTwo{
-    border:1px solid black;
     margin:0;
     width:83px;
     height:62px;
-    clip-path: circle(15% at 40px 50%);
-    background-color: blue;
+    background-image: url(../images/Astronaut.svg);
+    background-size: 45px;
+    background-repeat: no-repeat;
     
 }
 
 .bothInSquare{
-    border:1px solid black;
     margin:0;
     width: 83px;
     height:62px;
-    background-color: red;
-    
+    background-image: url(../images/Both.svg);
+    background-size: 65px;
+    background-repeat: no-repeat;
 }
 
 .tiles{
@@ -42,6 +41,18 @@
     grid-template-columns: repeat(10, 83px);
     grid-template-rows: repeat(10, 62px);
     justify-content:center;
+}
+
+#_93, #_76, #_52, #_25, #_6{
+    background-image: url(../images/Portal1.svg) ;
+    background-size: 60px;
+    background-repeat: no-repeat;
+}
+
+#_18, #_30, #_40, #_59, #_75, #_83{
+    background-image: url(../images/Portal2.svg) ;
+    background-size: 60px;
+    background-repeat: no-repeat;
 }
 
 #_5, #_6{
@@ -403,3 +414,4 @@
 #_80, #_81, #_100{
     margin-top: -5px;
 }
+

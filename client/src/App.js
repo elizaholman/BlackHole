@@ -14,8 +14,14 @@ function App() {
 
   useEffect(() => {
     PlayerService.getPlayers()
-      .then(players => setPlayers(players));
+      .then(players => setPlayers(players.sort( (a, b) => {
+        return b.wins - a.wins 
+      })));
   }, []);
+
+  // setFilms( data.results.sort( ( a, b ) => {
+  //   return a.episode_id - b.episode_id
+  // } ) );
 
   const deletePlayer = playerToDelete => {
     PlayerService.deletePlayer(playerToDelete);
@@ -30,9 +36,7 @@ function App() {
   const updateScore = (playerWin, playerLose) => {
       PlayerService.updatePlayer(playerWin)
       PlayerService.updatePlayer(playerLose)
-    }
-
-
+  }
 
 
 
