@@ -19,10 +19,6 @@ function App() {
       })));
   }, []);
 
-  // setFilms( data.results.sort( ( a, b ) => {
-  //   return a.episode_id - b.episode_id
-  // } ) );
-
   const deletePlayer = playerToDelete => {
     PlayerService.deletePlayer(playerToDelete);
     setPlayers(players.filter(player => player._id !== playerToDelete))
