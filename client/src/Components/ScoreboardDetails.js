@@ -4,8 +4,12 @@ const ScoreboardDetails = ({player}) => {
 
   const wins = player.wins
   const losses = player.losses
-  const winPercentage = Math.floor(wins/(wins+losses)*100)
 
+  let winPercentage;   
+  if (wins === 0){
+    winPercentage = 0
+  }
+  else {winPercentage = Math.floor(wins/(wins+losses)*100)}
 
 
   return (
