@@ -8,9 +8,10 @@
     margin:0;
     width:83px;
     height:62px;
-    background-image: url(../images/Alien.svg);
+    background-image: url(../images/Alien.png);
     background-size: 45px;
     background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 .playerTwo{
@@ -20,6 +21,7 @@
     background-image: url(../images/Astronaut.svg);
     background-size: 45px;
     background-repeat: no-repeat;
+    background-position: 50%;
     
 }
 
@@ -55,9 +57,37 @@
     background-repeat: no-repeat;
 }
 
+#_1{
+    margin-top: 10px;
+}
+
+#_2{
+    margin-top: 8px;
+    margin-left: -10px;
+}
+
+#_3{
+    margin-top: 8px;
+    margin-left: -5px;
+}
+
+#_4{
+    margin-top: 5px;
+    margin-left: -5px;
+}
+
 #_5, #_6{
     height: 70px;
     margin-top: -5px;
+}
+
+#_7, #_8{
+    margin-top: 8px;
+}
+
+#_9, #_10{
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 #_14{
@@ -407,7 +437,7 @@
     margin-left: -5px;
 }
 
-#_1, #_20, #_21{
+#_20, #_21{
     margin-top: 5px;
 }
 
