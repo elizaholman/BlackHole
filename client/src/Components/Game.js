@@ -4,7 +4,7 @@ import "./Game.css";
 import PortalSound from "../AudioFiles/PortalSound.mp3";
 import BlackholeSound from "../AudioFiles/SpaceWarp1.mp3";
 
-const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
+const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2}) => {
   const [position1, setPosition1] = useState(1);
   const [position2, setPosition2] = useState(1);
   const [test1, setTest1] = useState(null);
@@ -12,6 +12,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
 
   const [showPopup1, setShowPopup1] = useState(true);
   const [showPopup2, setShowPopup2] = useState(true);
+  
 
   const getPlayerOne = () => {
     for (const player of players) {
@@ -29,11 +30,6 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
       }
     }
   };
-
-  // useEffect(() => {
-  //   setPosition1(1)
-  //   setPosition2(1)
-  // }, [])
 
   useEffect(() => {
     getPlayerOne();
@@ -198,8 +194,14 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
 
   return (
     <div className="gameboard">
+      {!selectPlayer ? <div className="title">Select Player 1
+          </div> : null}
+          {!selectPlayer2 ? <div className="title">Select Player 2
+          </div> : null}
       <div className="dice-div">
         <Dice
+        selectPlayer2={selectPlayer2}
+          selectPlayer={selectPlayer}
           diceRoll1={diceRoll1}
           diceRoll2={diceRoll2}
           position1={position1}

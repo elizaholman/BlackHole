@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import DiceRollSound1 from '../AudioFiles/DiceRoll1.mp3'
 import DiceRollSound2 from '../AudioFiles/DiceRoll2.mp3'
 
-const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2}) => {
+const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2, selectPlayer, selectPlayer2}) => {
 
   const [roll, setRoll] = useState()
+
 
   const portals = [
     {entrance:93,exit:59},
@@ -28,13 +29,20 @@ function blackHoleRoll(){
 }
 
   const handleDiceRoll= () => {
+
+    if(selectPlayer && selectPlayer2 === true){
+
+    
+
     if (test1.active === true){
     diceRoll1(position1, portals, blackhole, rollNumber())
   }
   else if (test2.active === true){
     diceRoll2(position2, portals, blackhole, rollNumber())
-  }
 }
+}
+}
+
 
 function rollNumber(){
   const randomNumber = Math.floor(Math.random()* 6)+1;
