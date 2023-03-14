@@ -216,9 +216,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_96"></div>
         <div className="tile" id="_95"></div>
         <div className="tile" id="_94"></div>
-        <div className="tile" id="_93">
-          ENTRANCE
-        </div>
+        <div className="tile" id="_93">ENTRANCE</div>
         <div className="tile" id="_92"></div>
         <div className="tile" id="_91"></div>
         <div className="tile" id="_81"></div>
@@ -235,11 +233,9 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_79"></div>
         <div className="tile" id="_78"></div>
         <div className="tile" id="_77"></div>
-
         <div className="tile" id="_76">ENTRANCE</div>
         <div className="tile" id="_75">EXIT</div>
         <div className="tile" id="_74"></div>
-
         <div className="tile" id="_73"></div>
         <div className="tile" id="_72"></div>
         <div className="tile" id="_71"></div>
@@ -257,18 +253,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_59">EXIT</div>
         <div className="tile" id="_58"></div>
         <div className="tile" id="_57"></div>
-        <div className="tile" id="_56"> 
-      {!showPopup1 ? <div className="title"><h1 >{test1.name} Wins!</h1>
-      <a href="/game">
-        <button className="delete-button" >Play Again</button>
-      </a>
-      </div> : null}
-
-      {!showPopup2 ? <div className="title"><h1 >{test2.name} Wins!</h1>
-      <a href="/game">
-        <button className="delete-button">Play Again</button>
-      </a>
-      </div> : null}</div>
+        <div className="tile" id="_56"></div>
         <div className="tile" id="_55"></div>
         <div className="tile" id="_54"></div>
         <div className="tile" id="_53"></div>
@@ -278,16 +263,13 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_42"></div>
         <div className="tile" id="_43"></div>
         <div className="tile" id="_44"></div>
-      
         <div className="tile" id="_45"></div>
-
         <div className="tile" id="_46"></div>
         <div className="tile" id="_47"></div>
         <div className="tile" id="_48"></div>
         <div className="tile" id="_49"></div>
         <div className="tile" id="_50"></div>
         <div className="tile" id="_40">EXIT</div>
-
         <div className="tile" id="_39"></div>
         <div className="tile" id="_38"></div>
         <div className="tile" id="_37"></div>
@@ -301,16 +283,12 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_22"></div>
         <div className="tile" id="_23"></div>
         <div className="tile" id="_24"></div>
-        <div className="tile" id="_25">
-          ENTRANCE
-        </div>
+        <div className="tile" id="_25">ENTRANCE</div>
         <div className="tile" id="_26"></div>
         <div className="tile" id="_27"></div>
         <div className="tile" id="_28"></div>
         <div className="tile" id="_29"></div>
-        <div className="tile" id="_30">
-          EXIT
-        </div>
+        <div className="tile" id="_30">EXIT</div>
         <div className="tile" id="_20"></div>
         <div className="tile" id="_19"></div>
         <div className="tile" id="_18">EXIT</div>
@@ -319,27 +297,31 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore }) => {
         <div className="tile" id="_15"></div>
         <div className="tile" id="_14"></div>
         <div className="tile" id="_13"></div>
-
         <div className="tile" id="_12"></div>
-
         <div className="tile" id="_11"></div>
         <div className="tile" id="_1"></div>
         <div className="tile" id="_2"></div>
         <div className="tile" id="_3"></div>
         <div className="tile" id="_4"></div>
         <div className="tile" id="_5"></div>
-        <div className="tile" id="_6">
-          ENTRANCE
-        </div>
+        <div className="tile" id="_6">ENTRANCE</div>
         <div className="tile" id="_7"></div>
         <div className="tile" id="_8"></div>
-
         <div className="tile" id="_9"></div>
-
         <div className="tile" id="_10"></div>
       </div>
-
-     
+        <div className="player-wins">
+          {!showPopup1 ? <div className="win-name"><h1 >{test1.name} Wins!</h1>
+            <a className="link" href="/game">
+              <button className="replay-button">Play Again</button>
+            </a>
+          </div> : null}
+          {!showPopup2 ? <div className="win-name"><h1 >{test2.name} Wins!</h1>
+            <a href="/game">
+              <button className="replay-button">Play Again</button>
+            </a>
+          </div> : null}
+        </div>
     </div>
   );
 };
