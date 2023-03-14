@@ -45,7 +45,7 @@
     justify-content:center;
 }
 
-#_93, #_76, #_52, #_25, #_6{
+/* #_93, #_76, #_52, #_25, #_6{
     background-image: url(../images/Portal1.svg) ;
     background-size: 60px;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@
     background-image: url(../images/Portal2.svg) ;
     background-size: 60px;
     background-repeat: no-repeat;
-}
+} */
 
 #_1{
     margin-top: 10px;
