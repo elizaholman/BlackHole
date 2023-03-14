@@ -6,7 +6,7 @@ const GameContainer = ({players, updateScore}) => {
 
   return (
     <div className='game-container'>
-      <h1 className='title'>Blackhole</h1>
+      <h1 className='title'>Black hole</h1>
       <PlayerSelect players={players} updateScore={updateScore}/>
     </div>
   )

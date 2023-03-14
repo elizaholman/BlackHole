@@ -9,7 +9,7 @@ const Scoreboard = ({players}) => {
 
   return (
     <div className='scoreboard'>
-      <h1 className='title'>Blackhole</h1>
+      <h1 className='title'>Black hole</h1>
       <div className='table-div'>
         <table className='table'>
           <tr className='table'>
