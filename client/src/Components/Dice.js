@@ -41,8 +41,7 @@ function rollNumber(){
   if(randomNumber === 1){
     new Audio(DiceRollSound1).play()}
   else if(randomNumber === 3){
-    new Audio(DiceRollSound1).play()
-}
+    new Audio(DiceRollSound1).play()}
   else if(randomNumber === 5){
     new Audio(DiceRollSound1).play()
   }
