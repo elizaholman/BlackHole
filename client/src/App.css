@@ -325,6 +325,11 @@
   animation: flicker 1s infinite alternate;  
 }
 
+.table-heading{
+  font-size: 30px;
+  text-decoration: underline;
+}
+
 .table-item{
   text-align: center;
   width: 200px;
@@ -349,7 +354,7 @@
 .dice{
   background: #000000a4;
   font-style: italic;
-  font-size: 30px;
+  font-size: 20px;
   width: 100px;
   height: 100px;
   color:rgb(255, 214, 148);
@@ -358,7 +363,6 @@
   border-radius: 10px;
   text-transform: uppercase;
   animation: flicker 1s infinite alternate;
-
 }
 
 .dice-div{
