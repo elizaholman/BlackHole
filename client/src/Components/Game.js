@@ -4,11 +4,11 @@ import "./Game.css";
 import PortalSound from "../AudioFiles/PortalSound.mp3";
 import BlackholeSound from "../AudioFiles/SpaceWarp1.mp3";
 
-const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2, setPlayerTurn1, setPlayerTurn2}) => {
+const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2}) => {
   const [position1, setPosition1] = useState(1);
   const [position2, setPosition2] = useState(1);
-  const [test1, setTest1] = useState(null);
-  const [test2, setTest2] = useState(null);
+  const [player1, setPlayer1] = useState(null);
+  const [player2, setPlayer2] = useState(null);
 
   const [showPopup1, setShowPopup1] = useState(true);
   const [showPopup2, setShowPopup2] = useState(true);
@@ -18,7 +18,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (const player of players) {
       if (player._id === playerOneId) {
         player.active = true;
-        setTest1(player);
+        setPlayer1(player);
       }
     }
   };
@@ -26,7 +26,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   const getPlayerTwo = () => {
     for (const player of players) {
       if (player._id === playerTwoId) {
-        setTest2(player);
+        setPlayer2(player);
       }
     }
   };
@@ -83,10 +83,9 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     setPosition1(position);
-    setPlayerTurn1("player2-select-red")
-    setPlayerTurn2("player2-select-green")
-    test1.active = false;
-    test2.active = true;
+    player1.active = false;
+    player2.active = true;
+    s
     return position;
   }
 
@@ -109,16 +108,14 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     setPosition2(position);
-    setPlayerTurn2("player2-select-red")
-    setPlayerTurn1("player2-select-green")
-    test1.active = true;
-    test2.active = false;
+    player1.active = true;
+    player2.active = false;
     return position;
   }
 
   const winScreen1 = () => {
     console.log("here");
-    updateScore(test1, test2);
+    updateScore(player1, player2);
     if (showPopup1) {
       return setShowPopup1(!showPopup1);
     }
@@ -126,7 +123,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
 
   const winScreen2 = () => {
     console.log("here");
-    updateScore(test2, test1);
+    updateScore(player2, player1);
     if (showPopup2) {
       return setShowPopup2(!showPopup2);
     }
@@ -147,10 +144,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     if (position === 100) {
-      test1.wins += 1;
-      test2.losses += 1;
-      setTest1(test1);
-      setTest2(test2);
+      player1.wins += 1;
+      player2.losses += 1;
+      setPlayer1(player1);
+      setPlayer2(player2);
       winScreen1();
     }
   };
@@ -169,11 +166,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     if (position === 100) {
-      test2.wins += 1;
-      test1.losses += 1;
-      setTest1(test1);
-      setTest2(test2);
-      
+      player2.wins += 1;
+      player1.losses += 1;
+      setPlayer1(player1);
+      setPlayer2(player2);
       winScreen2();
     }
   };
@@ -200,7 +196,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   return (
     <div className="gameboard">
       <div className="select-prompt-div">
-       {!selectPlayer ? <div className="select-prompt">Select Player 1
+        {!selectPlayer ? <div className="select-prompt">Select Player 1
           </div> : null}
           {!selectPlayer2 ? <div className="select-prompt">Select Player 2
           </div> : null}
@@ -213,8 +209,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
           diceRoll2={diceRoll2}
           position1={position1}
           position2={position2}
-          test1={test1}
-          test2={test2}
+          player1={player1}
+          player2={player2}
         />
       </div>
       <div className="tiles">
@@ -320,12 +316,12 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
         <div className="tile" id="_10"></div>
       </div>
         <div className="player-wins">
-          {!showPopup1 ? <div className="win-name"><h1 >{test1.name} Wins!</h1>
+          {!showPopup1 ? <div className="win-name"><h1 >{player1.name} Wins!</h1>
             <a className="link" href="/game">
               <button className="replay-button">Play Again</button>
             </a>
           </div> : null}
-          {!showPopup2 ? <div className="win-name"><h1 >{test2.name} Wins!</h1>
+          {!showPopup2 ? <div className="win-name"><h1 >{player2.name} Wins!</h1>
             <a href="/game">
               <button className="replay-button">Play Again</button>
             </a>
