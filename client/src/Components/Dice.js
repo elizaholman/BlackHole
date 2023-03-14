@@ -43,9 +43,10 @@ function blackHoleRoll(){
 
 function rollNumber(){
   const randomNumber = Math.floor(Math.random()* 6)+1;
-  if(randomNumber % 2 === 1){
+
+  if(randomNumber %2 === 1){
     new Audio(DiceRollSound1).play()}
-  else{new Audio(DiceRollSound2).play()}
+else{new Audio(DiceRollSound2).play()}
   setRoll(randomNumber)
   return randomNumber
 }
