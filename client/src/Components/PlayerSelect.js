@@ -37,14 +37,14 @@ const PlayerSelect = ({ players, updateScore }) => {
     <div className='player-select'>
 
       <select className="player1-select" onChange={handleSelectPlayer1}>
-        <option selected disabled hidden>Select Player 1</option>
+        <option selected disabled hidden>Player 1</option>
         {playerSelect_1}
       </select>
 
       <Game selectPlayer2={selectPlayer2} selectPlayer={selectPlayer} updateScore={updateScore} playerOneId={playerOneId} playerTwoId={playerTwoId} players={players}/>
 
       <select className="player2-select" onChange={handleSelectPlayer2}>
-      <option selected disabled hidden>Select Player 2</option>
+      <option selected disabled hidden>Player 2</option>
       {playerSelect_2}
       </select>
     </div>

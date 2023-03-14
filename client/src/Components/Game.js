@@ -194,10 +194,12 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
 
   return (
     <div className="gameboard">
-      {!selectPlayer ? <div className="title">Select Player 1
+      <div className="select-prompt-div">
+       {!selectPlayer ? <div className="select-prompt">Select Player 1
           </div> : null}
-          {!selectPlayer2 ? <div className="title">Select Player 2
+          {!selectPlayer2 ? <div className="select-prompt">Select Player 2
           </div> : null}
+          </div>
       <div className="dice-div">
         <Dice
         selectPlayer2={selectPlayer2}
