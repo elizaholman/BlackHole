@@ -281,11 +281,11 @@
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:Green;
+  color:rgb(74, 134, 255);
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
-  animation: flicker 1s infinite alternate;  
+  animation: blue-flicker 1s infinite alternate;  
   font-size: 20px;
 }
 .player1-select-red{
@@ -294,7 +294,7 @@
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:red;
+  color:rgb(255, 214, 148);
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
@@ -308,11 +308,11 @@
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color: green;
+  color: rgb(74, 134, 255);
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
-  animation: flicker 1s infinite alternate;  
+  animation: blue-flicker 1s infinite alternate;  
   font-size: 20px;
 }
 
@@ -322,7 +322,7 @@
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:red;
+  color:rgb(255, 214, 148);
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
@@ -421,6 +421,8 @@
 :root { 
   --neon-text-color: rgb(255, 157, 0);
   --neon-border-color: rgb(255, 157, 0);
+  --neon-blue-text-color: rgb(0, 85, 255);
+  --neon-blue-border-color: rgb(0, 85, 255);
 }
 
   @keyframes flicker {
@@ -459,4 +461,42 @@
               inset 0 0 1rem var(--neon-border-color);
       }    
   }
+
+
+  @keyframes blue-flicker {
+      
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem rgb(0, 38, 255),
+            0.2rem 0.2rem 1rem rgb(0, 38, 255),
+            0 0 6rem var(--neon-blue-text-color),
+            0 0 6rem var(--neon-blue-text-color),
+            0 0 6rem var(--neon-blue-text-color),
+            0 0 8rem var(--neon-blue-text-color),
+            0 0 10rem var(--neon-blue-text-color);
+        
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 3rem var(--neon-blue-border-color),
+            inset 0 0 3rem var(--neon-blue-border-color),
+            0 0 2rem var(--neon-blue-border-color),
+            inset 0 0 2rem var(--neon-blue-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow:
+            -0.2rem -0.2rem 1rem rgb(255, 157, 0),
+            0.2rem 0.2rem 1rem rgb(255, 157, 0),
+            0 0 5rem var(--neon-blue-text-color),;
+        box-shadow:
+            0 0 .4rem #fff,
+            inset 0 0 .4rem #fff,
+            0 0 2rem var(--neon-blue-border-color),
+            inset 0 0 2rem var(--neon-blue-border-color),
+            0 0 1rem var(--neon-blue-border-color),
+            inset 0 0 1rem var(--neon-blue-border-color);
+    }    
+}
 
