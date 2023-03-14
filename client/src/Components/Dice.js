@@ -4,7 +4,7 @@ import DiceRollSound2 from '../AudioFiles/DiceRoll2.mp3'
 
 const Dice = ({diceRoll1, diceRoll2, position1, position2, test1, test2, selectPlayer, selectPlayer2}) => {
 
-  const [roll, setRoll] = useState()
+  const [roll, setRoll] = useState('DICE')
 
 
   const portals = [
@@ -59,9 +59,9 @@ function rollNumber(){
 }
 
   return (
-    <div>
-      <button className='dice' onClick={handleDiceRoll}> Dice</button>
-      <p className='title'>You rolled: {roll}</p>
+    <div className="dice-wrap">
+      <button className='dice' onClick={handleDiceRoll}>{roll}</button>
+  
     </div>
   )
 }
