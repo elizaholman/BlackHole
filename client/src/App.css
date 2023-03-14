@@ -100,7 +100,7 @@
 .title{
   background: #000000a4;
   font-style: italic;
-  font-size: 25px;
+  font-size: 35px;
   color:rgb(255, 214, 148);
   padding: 10px;
   border: 3px solid #fff;
@@ -142,6 +142,7 @@
   text-decoration: none;
   color:rgb(255, 214, 148);
 }
+
 
 .homepage{
   padding-top: 5px;
@@ -258,6 +259,9 @@
   animation: flicker 1s infinite alternate;
 }
 
+.replay-button:hover{
+  cursor: pointer;
+}
 
 .game-container{
   display: flex;
@@ -299,6 +303,14 @@
   text-transform: uppercase;
   animation: flicker 1s infinite alternate;  
   font-size: 20px;
+}
+
+.player1-select:hover{
+  cursor: pointer;
+}
+
+.player2-select:hover{
+  cursor: pointer;
 }
 
 .players{
@@ -364,6 +376,10 @@
   border-radius: 10px;
   text-transform: uppercase;
   animation: flicker 1s infinite alternate;
+}
+
+.dice:hover{
+  cursor: pointer;
 }
 
 .dice-div{
