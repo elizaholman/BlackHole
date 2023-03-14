@@ -55,14 +55,13 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
 
   let div1 = document.getElementsByClassName("playerOne");
 
-  let div2 = document.getElementsByClassName("PlayerTwo");
+  // let div2 = document.getElementsByClassName("PlayerTwo");
 
   let div3 = document.getElementsByClassName("bothInSquare");
 
 
 
   function diceRoll1(position, portals, blackhole, roll) {
-    // const roll = dice(6)
     position += roll;
     if (position > 100) {
       position -= roll;
@@ -80,15 +79,14 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     setPosition1(position);
-     setPlayerTurn1("player2-select-red") 
-     setPlayerTurn2("player2-select-green") 
+    setPlayerTurn1("player2-select-red") 
+    setPlayerTurn2("player2-select-green") 
     player1.active = false;
     player2.active = true;
     return position;
   }
 
   function diceRoll2(position, portals, blackhole, roll) {
-    // const roll = dice(3)
     position += roll;
     if (position > 100) {
       position -= roll;
@@ -106,15 +104,14 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     setPosition2(position);
-     setPlayerTurn2("player2-select-red")
-     setPlayerTurn1("player2-select-green")
+    setPlayerTurn2("player2-select-red")
+    setPlayerTurn1("player2-select-green")
     player1.active = true;
     player2.active = false;
     return position;
   }
 
   const winScreen1 = () => {
-    console.log("here");
     updateScore(player1, player2);
     if (showPopup1) {
       return setShowPopup1(!showPopup1);
@@ -122,7 +119,6 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   };
 
   const winScreen2 = () => {
-    console.log("here");
     updateScore(player2, player1);
     if (showPopup2) {
       return setShowPopup2(!showPopup2);
@@ -135,8 +131,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
         div.className = "playerOne";
       }
     }
-    const test = document.getElementsByClassName("playerTwo");
-    for (let div of test) {
+    const div2 = document.getElementsByClassName("playerTwo");
+    for (let div of div2) {
       if (div.id === `_${position}`) {
         if (div.className === "playerTwo") {
           div.className = "bothInSquare";
@@ -170,7 +166,6 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       player1.losses += 1;
       setPlayer1(player1);
       setPlayer2(player2);
-      
       winScreen2();
     }
   };
