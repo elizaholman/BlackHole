@@ -1,5 +1,4 @@
 .tile {
-    border: solid red 1px;
     margin:0;
     width:83px;
     height:62px;
@@ -9,9 +8,10 @@
     margin:0;
     width:83px;
     height:62px;
-    background-image: url(../images/Alien.svg);
+    background-image: url(../images/Alien.png);
     background-size: 45px;
     background-repeat: no-repeat;
+    background-position: 50%;
 }
 
 .playerTwo{
@@ -21,6 +21,7 @@
     background-image: url(../images/Astronaut.svg);
     background-size: 45px;
     background-repeat: no-repeat;
+    background-position: 50%;
     
 }
 
@@ -80,7 +81,11 @@
     margin-top: -5px;
 }
 
-#_10{
+#_7, #_8{
+    margin-top: 8px;
+}
+
+#_9, #_10{
     margin-top: 10px;
     margin-left: 5px;
 }
