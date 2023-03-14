@@ -18,7 +18,7 @@
     margin:0;
     width:83px;
     height:62px;
-    background-image: url(../images/Astronaut.svg);
+    background-image: url(../images/Astronaut.png);
     background-size: 45px;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -29,7 +29,7 @@
     margin:0;
     width: 83px;
     height:62px;
-    background-image: url(../images/Both.svg);
+    background-image: url(../images/Both.png);
     background-size: 65px;
     background-repeat: no-repeat;
 }
@@ -45,7 +45,7 @@
     justify-content:center;
 }
 
-#_93, #_76, #_52, #_25, #_6{
+/* #_93, #_76, #_52, #_25, #_6{
     background-image: url(../images/Portal1.svg) ;
     background-size: 60px;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@
     background-image: url(../images/Portal2.svg) ;
     background-size: 60px;
     background-repeat: no-repeat;
-}
+} */
 
 #_1{
     margin-top: 10px;
