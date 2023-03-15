@@ -52,6 +52,14 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     positionRender2(position2);
   }, [diceRoll2]);
 
+  // useEffect(() => {
+  //   winScreen1()
+  // }, [position1 === 100])
+
+  // useEffect(() => {
+  //   winScreen2()
+  // }, [position2 === 100])
+
   let divs = document.getElementsByClassName("tile");
 
   let div1 = document.getElementsByClassName("playerOne");
@@ -151,6 +159,9 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   }
 
   const winScreen1 = () => {
+    player1.wins += 1;
+    player2.losses += 1;
+    console.log(player1.wins)
     updateScore(player1, player2);
     if (showPopup1) {
       return setShowPopup1(!showPopup1);
@@ -158,11 +169,16 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   };
 
   const winScreen2 = () => {
+    player2.wins += 1;
+    player1.losses += 1;
+    console.log(player2.wins)
     updateScore(player2, player1);
     if (showPopup2) {
       return setShowPopup2(!showPopup2);
     }
   };
+
+
 
   const positionRender1 = (position) => {
     for (let div of divs) {
@@ -179,13 +195,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     if (position === 100) {
-      console.log(player1.wins)
-      player1.wins += 1;
-      player2.losses += 1;
-      // setPlayer1(player1);
-      // setPlayer2(player2);
-      console.log(player1.wins)
-       return winScreen1();
+
+       winScreen1();
     }
   };
 
@@ -203,13 +214,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     if (position === 100) {
-      console.log(player2.wins)
-      player2.wins += 1;
-      player1.losses += 1;
-      // setPlayer1(player1);
-      // setPlayer2(player2);
-      console.log(player2.wins)
-      return winScreen2();
+    
+      winScreen2();
     }
   };
 
