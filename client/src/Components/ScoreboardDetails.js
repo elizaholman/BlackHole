@@ -2,8 +2,8 @@ import React from 'react'
 
 const ScoreboardDetails = ({player}) => {
 
-  const wins = player.wins
-  const losses = player.losses
+  const wins = (player.wins / 2)
+  const losses = (player.losses / 2)
 
   let winPercentage;   
   if (wins === 0){
@@ -15,8 +15,8 @@ const ScoreboardDetails = ({player}) => {
   return (
     <tr className='table-row'>
         <td className='table-item'>{player.name}</td>
-        <td className='table-item'>{player.wins}</td>
-        <td className='table-item'>{player.losses}</td>
+        <td className='table-item'>{wins}</td>
+        <td className='table-item'>{losses}</td>
         <td className='table-item'>{winPercentage}%</td>
     </tr>
   )
