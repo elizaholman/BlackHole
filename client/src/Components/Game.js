@@ -3,6 +3,7 @@ import Dice from "./Dice";
 import "./Game.css";
 import PortalSound from "../AudioFiles/PortalSound.mp3";
 import BlackholeSound from "../AudioFiles/SpaceWarp1.mp3";
+import flicker from "./Game.css"
 
 const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2, setPlayerTurn1 , setPlayerTurn2 }) => {
   const [position1, setPosition1] = useState(1);
@@ -62,16 +63,26 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
 
 
   function diceRoll1(position, portals, blackhole, roll) {
+    const portalFlicker = document.getElementsByClassName("flicker");
+    for (let div of portalFlicker) {
+      div.className = "tile";
+    }
     position += roll;
     if (position > 100) {
       position -= roll;
     }
+
     for (const portal of portals) {
       if (position === portal.entrance) {
         new Audio(PortalSound).play();
+        for (let div of divs) {
+          if (div.id === `_${position}`) {
+            div.className= "flicker"
+          }}
         position = portal.exit;
       }
     }
+
     for (const hole of blackhole) {
       if (position === hole.entrance) {
         new Audio(BlackholeSound).play();
@@ -89,6 +100,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   }
 
   function diceRoll2(position, portals, blackhole, roll) {
+    const portalFlicker = document.getElementsByClassName("flicker");
+    for (let div of portalFlicker) {
+      div.className = "tile";
+    }
     position += roll;
     if (position > 100) {
       position -= roll;
@@ -96,6 +111,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (const portal of portals) {
       if (position === portal.entrance) {
         new Audio(PortalSound).play();
+        for (let div of divs) {
+          if (div.id === `_${position}`) {
+            div.className= "flicker"
+          }}
         position = portal.exit;
       }
     }
@@ -200,7 +219,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   return (
     <div className="gameboard">
       <div className="select-prompt-div">
-       {!selectPlayer ? <div className="select-prompt">Select Player 1
+      {!selectPlayer ? <div className="select-prompt">Select Player 1
           </div> : null}
           {!selectPlayer2 ? <div className="select-prompt">Select Player 2
           </div> : null}
