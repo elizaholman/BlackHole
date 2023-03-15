@@ -1,4 +1,5 @@
 .tile {
+    /* border: solid red 1px; */
     margin:0;
     width:83px;
     height:62px;
@@ -46,7 +47,7 @@
 }
 
 .blackhole{
-    animation: flicker 1s; 
+    animation: ripple 1s; 
 }
 
 .flicker{
@@ -280,23 +281,40 @@
     margin-top: 10px;
 }
 
-#_45, #_56{
-    margin-left: 15px;
+#_45{
+    margin-left: 40px;
+    margin-top: -40px;;
 }
 
-#_46, #_55{
-    margin-right: 15px;
+#_46{
+    margin-left: -45px;
+    margin-top: -40px;;
 }
+
+#_55{
+    margin-left: -45px;
+    margin-top: 30px;;
+}
+
+#_56{
+    margin-left: 45px;
+    margin-top: 25px;;
+}
+
+/* #_56, #_45{
+    margin-left: 40px;
+} */
 
 
 #_56, #_55, #_45, #_46{
-    width: 60px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
 }
 
-#_56, #_55{
-    margin-top: 10px;
-}
+/* #_56, #_55{
+    margin-top: 15px;
+} */
 
 #_57{
     width: 70px;
@@ -461,6 +479,11 @@
     margin-top: -5px;
 }
 
+:root { 
+    --neon-ripple-text-color: rgb(183, 0, 255);
+    --neon-ripple-border-color: rgb(183, 0, 255);
+}
+
 @keyframes flicker {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
 
@@ -482,5 +505,29 @@
             inset 0 0 2rem var(--neon-border-color),
             0 0 1rem var(--neon-border-color),
             inset 0 0 1rem var(--neon-border-color);
+    }    
+}
+
+@keyframes ripple {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+
+        box-shadow:
+            0 0 .5rem rgb(183, 0, 255),
+            inset 0 0 .5rem rgb(183, 0, 255),
+            0 0 3rem var(--neon-ripple-border-color),
+            inset 0 0 3rem var(--neon-ripple-border-color),
+            0 0 2rem var(--neon-ripple-border-color),
+            inset 0 0 2rem var(--neon-ripple-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+
+        box-shadow:
+            0 0 .4rem rgb(183, 0, 255),
+            inset 0 0 .4rem rgb(183, 0, 255),
+            0 0 2rem var(--neon-ripple-border-color),
+            inset 0 0 2rem var(--neon-ripple-border-color),
+            0 0 1rem var(--neon-ripple-border-color),
+            inset 0 0 1rem var(--neon-ripple-border-color);
     }    
 }
