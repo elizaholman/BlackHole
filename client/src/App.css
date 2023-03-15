@@ -19,12 +19,12 @@
   align-self: end;
   background: #000000a4;
   font-style: italic;
-  font-size: 20px;
+  font-size: 15px;
   border: 3px solid #fff;
   border-radius: 20px;
   padding: 10px;
   text-transform: uppercase;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   animation: flicker 1s infinite alternate;  
 }
 
@@ -32,31 +32,41 @@
   cursor: pointer;
 }
 
-.rules-page {
+.rules-page{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
+  row-gap: 65px;
+}
+
+.rules-full{
   background: #000000a4;
   font-style: italic;
   font-size: 20px;
+  color:rgb(242, 226, 200);
   border: 3px solid #fff;
   border-radius: 20px;
-  padding: 20px;
+  padding: 50px;
   text-transform: uppercase;
   animation: flicker 1s infinite alternate;
-  /* position: fixed;
-  top:30%;
-  left:30%;
-  right:30%;
-  bottom:30%; */
 }
 
-.rules-div{
+.rules-page-top{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.rules-list-div{
   display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-  
+  justify-content: center;
+}
+
+.rules-list{
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
 }
 
 .player1{
@@ -81,7 +91,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 30px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 10px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -119,7 +129,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 20px;
-  color: rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   border: 3px solid #fff;
   border-radius: 20px;
   padding: 20px;
@@ -139,6 +149,7 @@
   display: flex;
   justify-content: center;
   background: #000000a4;
+  color:rgb(242, 226, 200);
   font-style: italic;
   font-size: 100px;
   border: 3px solid #fff;
@@ -153,11 +164,12 @@
   background: #000000a4;
   font-style: italic;
   font-size: 35px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 10px;
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
+  text-align: center;
   animation: flicker 1s infinite alternate;  
 }
 
@@ -192,9 +204,8 @@
 
 .nav-li:visited{
   text-decoration: none;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
 }
-
 
 .homepage{
   padding-top: 5px;
@@ -213,11 +224,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 670px;
+  width: 700px;
   background: #000000a4;
   font-style: italic;
   font-size: 20px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 0px 30px 30px 30px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -229,7 +240,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 15px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 10px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -240,7 +251,7 @@
 .input::placeholder{
   font-style: italic;
   font-size: 15px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   text-transform: uppercase;
   animation: flicker 1s infinite alternate;  
 }
@@ -253,10 +264,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 730px;
   background: #000000a4;
   font-style: italic;
   font-size: 20px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 0px 30px 30px 0px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -278,7 +290,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 30px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 20px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -291,7 +303,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 10px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 10px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -303,7 +315,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 20px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 10px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -348,7 +360,7 @@
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
@@ -376,7 +388,7 @@
   width:150px;
   background: #000000a4;
   font-style: italic;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   border: 3px solid #fff;
   border-radius: 20px;
   text-transform: uppercase;
@@ -409,7 +421,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 25px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 20px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -431,7 +443,7 @@
   background: #000000a4;
   font-style: italic;
   font-size: 25px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 20px;
   border: 3px solid #fff;
   border-radius: 20px;
@@ -449,7 +461,7 @@
   font-size: 20px;
   width: 100px;
   height: 100px;
-  color:rgb(255, 214, 148);
+  color:rgb(242, 226, 200);
   padding: 20px;
   border: 3px solid #fff;
   border-radius: 10px;
