@@ -42,15 +42,15 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     positionRender2(1);
   }, [playerTwoId]);
 
-  // useEffect(() => {
-  //   oldPositionRender1();
-  //   positionRender1(position1);
-  // }, [diceRoll1]);
+  useEffect(() => {
+    oldPositionRender1();
+    positionRender1(position1);
+  }, [diceRoll1]);
 
-  // useEffect(() => {
-  //   oldPositionRender2();
-  //   positionRender2(position2);
-  // }, [diceRoll2]);
+  useEffect(() => {
+    oldPositionRender2();
+    positionRender2(position2);
+  }, [diceRoll2]);
 
   let divs = document.getElementsByClassName("tile");
 
@@ -94,8 +94,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     setPlayerTurn2("player2-select-green") 
     player1.active = false;
     player2.active = true;
-    oldPositionRender1();
-    positionRender1(position1);
+    // oldPositionRender1();
+    // positionRender1(position1);
     return position;
   }
 
@@ -129,8 +129,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     setPlayerTurn1("player2-select-green")
     player1.active = true;
     player2.active = false;
-    oldPositionRender2();
-    positionRender2(position2);
+    // oldPositionRender2();
+    // positionRender2(position2);
     return position;
   }
 
