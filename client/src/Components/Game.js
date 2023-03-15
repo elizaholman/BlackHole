@@ -8,8 +8,8 @@ import flicker from "./Game.css"
 const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, selectPlayer2, setPlayerTurn1 , setPlayerTurn2 }) => {
   const [position1, setPosition1] = useState(1);
   const [position2, setPosition2] = useState(1);
-  const [test1, setTest1] = useState(null);
-  const [test2, setTest2] = useState(null);
+  const [player1, setPlayer1] = useState(null);
+  const [player2, setPlayer2] = useState(null);
 
   const [showPopup1, setShowPopup1] = useState(true);
   const [showPopup2, setShowPopup2] = useState(true);
@@ -19,7 +19,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (const player of players) {
       if (player._id === playerOneId) {
         player.active = true;
-        setTest1(player);
+        setPlayer1(player);
       }
     }
   };
@@ -27,7 +27,7 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   const getPlayerTwo = () => {
     for (const player of players) {
       if (player._id === playerTwoId) {
-        setTest2(player);
+        setPlayer2(player);
       }
     }
   };
@@ -42,21 +42,21 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     positionRender2(1);
   }, [playerTwoId]);
 
-  useEffect(() => {
-    oldPositionRender1();
-    positionRender1(position1);
-  }, [diceRoll1]);
+  // useEffect(() => {
+  //   oldPositionRender1();
+  //   positionRender1(position1);
+  // }, [diceRoll1]);
 
-  useEffect(() => {
-    oldPositionRender2();
-    positionRender2(position2);
-  }, [diceRoll2]);
+  // useEffect(() => {
+  //   oldPositionRender2();
+  //   positionRender2(position2);
+  // }, [diceRoll2]);
 
   let divs = document.getElementsByClassName("tile");
 
   let div1 = document.getElementsByClassName("playerOne");
 
-  let div2 = document.getElementsByClassName("PlayerTwo");
+  // let div2 = document.getElementsByClassName("PlayerTwo");
 
   let div3 = document.getElementsByClassName("bothInSquare");
 
@@ -67,7 +67,6 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (let div of portalFlicker) {
       div.className = "tile";
     }
-
     position += roll;
     if (position > 100) {
       position -= roll;
@@ -93,8 +92,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     setPosition1(position);
     setPlayerTurn1("player2-select-red") 
     setPlayerTurn2("player2-select-green") 
-    test1.active = false;
-    test2.active = true;
+    player1.active = false;
+    player2.active = true;
+    oldPositionRender1();
+    positionRender1(position1);
     return position;
   }
 
@@ -126,22 +127,22 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     setPosition2(position);
     setPlayerTurn2("player2-select-red")
     setPlayerTurn1("player2-select-green")
-    test1.active = true;
-    test2.active = false;
+    player1.active = true;
+    player2.active = false;
+    oldPositionRender2();
+    positionRender2(position2);
     return position;
   }
 
   const winScreen1 = () => {
-    console.log("here");
-    updateScore(test1, test2);
+    updateScore(player1, player2);
     if (showPopup1) {
       return setShowPopup1(!showPopup1);
     }
   };
 
   const winScreen2 = () => {
-    console.log("here");
-    updateScore(test2, test1);
+    updateScore(player2, player1);
     if (showPopup2) {
       return setShowPopup2(!showPopup2);
     }
@@ -153,8 +154,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
         div.className = "playerOne";
       }
     }
-    const test = document.getElementsByClassName("playerTwo");
-    for (let div of test) {
+    const div2 = document.getElementsByClassName("playerTwo");
+    for (let div of div2) {
       if (div.id === `_${position}`) {
         if (div.className === "playerTwo") {
           div.className = "bothInSquare";
@@ -162,11 +163,13 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     if (position === 100) {
-      test1.wins += 1;
-      test2.losses += 1;
-      setTest1(test1);
-      setTest2(test2);
-      winScreen1();
+      console.log(player1.wins)
+      player1.wins += 1;
+      player2.losses += 1;
+      // setPlayer1(player1);
+      // setPlayer2(player2);
+      console.log(player1.wins)
+       return winScreen1();
     }
   };
 
@@ -184,12 +187,13 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
       }
     }
     if (position === 100) {
-      test2.wins += 1;
-      test1.losses += 1;
-      setTest1(test1);
-      setTest2(test2);
-      
-      winScreen2();
+      console.log(player2.wins)
+      player2.wins += 1;
+      player1.losses += 1;
+      // setPlayer1(player1);
+      // setPlayer2(player2);
+      console.log(player2.wins)
+      return winScreen2();
     }
   };
 
@@ -228,8 +232,8 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
           diceRoll2={diceRoll2}
           position1={position1}
           position2={position2}
-          test1={test1}
-          test2={test2}
+          player1={player1}
+          player2={player2}
         />
       </div>
       <div className="tiles">
@@ -335,12 +339,12 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
         <div className="tile" id="_10"></div>
       </div>
         <div className="player-wins">
-          {!showPopup1 ? <div className="win-name"><h1 >{test1.name} Wins!</h1>
+          {!showPopup1 ? <div className="win-name"><h1 >{player1.name} Wins!</h1>
             <a className="link" href="/game">
               <button className="replay-button">Play Again</button>
             </a>
           </div> : null}
-          {!showPopup2 ? <div className="win-name"><h1 >{test2.name} Wins!</h1>
+          {!showPopup2 ? <div className="win-name"><h1 >{player2.name} Wins!</h1>
             <a href="/game">
               <button className="replay-button">Play Again</button>
             </a>
