@@ -483,30 +483,6 @@
     --neon-ripple-border-color: rgb(183, 0, 255);
 }
 
-@keyframes flicker {
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-
-        box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 3rem var(--neon-border-color),
-            inset 0 0 3rem var(--neon-border-color),
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color);        
-    }
-    
-    20%, 24%, 55% {        
-
-        box-shadow:
-            0 0 .4rem #fff,
-            inset 0 0 .4rem #fff,
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 1rem var(--neon-border-color),
-            inset 0 0 1rem var(--neon-border-color);
-    }    
-}
-
 @keyframes ripple {
     0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
 
