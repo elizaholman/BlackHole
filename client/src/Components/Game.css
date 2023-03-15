@@ -1,5 +1,5 @@
 .tile {
-    /* border: solid red 1px; */
+    border: solid red 1px;
     margin:0;
     width:83px;
     height:62px;
@@ -293,12 +293,12 @@
 
 #_55{
     margin-left: -45px;
-    margin-top: 30px;;
+    margin-top: 20px;;
 }
 
 #_56{
-    margin-left: 45px;
-    margin-top: 25px;;
+    margin-left: 35px;
+    margin-top: 20px;;
 }
 
 /* #_56, #_45{
