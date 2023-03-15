@@ -45,6 +45,10 @@
     justify-content:center;
 }
 
+.blackhole{
+    animation: flicker 1s; 
+}
+
 .flicker{
     animation: flicker 1s;
 }
