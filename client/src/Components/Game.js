@@ -110,8 +110,6 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     setPlayerTurn2("player2-select-green") 
     player1.active = false;
     player2.active = true;
-    // oldPositionRender1();
-    // positionRender1(position1);
     return position;
   }
 
@@ -153,8 +151,6 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     setPlayerTurn1("player2-select-green")
     player1.active = true;
     player2.active = false;
-    // oldPositionRender2();
-    // positionRender2(position2);
     return position;
   }
 

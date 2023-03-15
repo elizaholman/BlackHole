@@ -35,7 +35,7 @@
 }
 
 .tiles{
-    background-image: url(../images/BlackholeBoard.jpg);
+    background-image: url(../images/BlackholeBoard.png);
     padding: 10px;
     background-position: center;
     background-size: cover;
@@ -78,11 +78,11 @@
 }
 
 #_6{
-    height: 65px;
-    margin-top: -5px;
-    margin-left: 18px;
+    height: 58px;
+    margin-top: -2px;
+    margin-left: 20px;
     border-radius: 60px;
-    width: 40px;
+    width: 38px;
 }
 
 #_7, #_8{
@@ -137,11 +137,11 @@
 }
 
 #_25{
-    height: 60px;
-    margin-left: 25px;
-    margin-top: -25px;    
+    height: 55px;
+    margin-left: 28px;
+    margin-top: -22px;    
     border-radius: 60px;
-    width: 40px;
+    width: 35px;
 }
 
 #_26{
@@ -260,10 +260,10 @@
 
 #_52{
     height: 50px;
-    margin-left: 17px;
-    margin-top: 5px;
+    margin-left: 21px;
+    margin-top: 6px;
     border-radius: 60px;
-    width: 40px;
+    width: 32px;
 }
 
 #_53{
@@ -281,39 +281,30 @@
 }
 
 #_45{
-    margin-left: 40px;
-    margin-top: -40px;;
+    margin-left: 38px;
+    margin-top: -45px;;
 }
 
 #_46{
     margin-left: -45px;
-    margin-top: -40px;;
+    margin-top: -45px;;
 }
 
 #_55{
     margin-left: -45px;
-    margin-top: 20px;;
+    margin-top: 18px;;
 }
 
 #_56{
-    margin-left: 35px;
-    margin-top: 20px;;
+    margin-left: 36px;
+    margin-top: 18px;;
 }
-
-/* #_56, #_45{
-    margin-left: 40px;
-} */
-
 
 #_56, #_55, #_45, #_46{
     width: 90px;
     height: 90px;
     border-radius: 50px;
 }
-
-/* #_56, #_55{
-    margin-top: 15px;
-} */
 
 #_57{
     width: 70px;
@@ -407,11 +398,11 @@
 }
 
 #_76{
-    margin-top: 25px;
-    margin-left: 25px;
+    margin-top: 28px;
+    margin-left: 28px;
     border-radius: 60px;
-    width: 40px;
-    height: 60px;
+    width: 35px;
+    height: 55px;
 }
 
 #_77{
@@ -458,9 +449,10 @@
 
 #_93{
     border-radius: 60px;
-    width: 40px;
-    margin-top: -7px;
-    margin-left: 24px;
+    width: 35px;
+    height: 58px;
+    margin-top: -5px;
+    margin-left: 26px;
 }
 
 #_96, #_95{

@@ -31,7 +31,7 @@ const Players = ({players, deletePlayer, addPlayer}) => {
         <h2>New Player:</h2>
         <div className='new-player'>
           <input className='input' onChange={handleNameChange} type='text' name="name" value={name} placeholder="Name:"></input>
-          <input className='input'type="submit" name="submit" value="Add Player"/>
+          <input className='input-button'type="submit" name="submit" value="Add Player"/>
         </div>
       </form>
     </div>
