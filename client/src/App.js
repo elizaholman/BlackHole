@@ -5,8 +5,10 @@ import Scoreboard from './Components/Scoreboard';
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import PlayerService from './services/PlayersService';
+import Rules from './Components/Rules';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react';
+
 
 function App() {
 
@@ -40,10 +42,11 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/players" element={<Players players={players} deletePlayer={deletePlayer} addPlayer={addPlayer}/>} />
-          <Route path="/game" element={<GameContainer players={players} updateScore={updateScore}/>} />
-          <Route path="/scoreboard" element={<Scoreboard players={players} />} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/players" element={<Players players={players} deletePlayer={deletePlayer} addPlayer={addPlayer}/>}/>
+          <Route path="/game" element={<GameContainer players={players} updateScore={updateScore}/>}/>
+          <Route path="/scoreboard" element={<Scoreboard players={players} />}/>
+          <Route path="/rules" element={<Rules/>} />
         </Routes>
         <NavBar/>
       </Router>

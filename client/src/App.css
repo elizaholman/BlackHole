@@ -84,6 +84,9 @@
 }
 
 .rules{
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 75px;
   align-self: end;
   background: #000000a4;
   font-style: italic;
@@ -92,6 +95,7 @@
   border-radius: 20px;
   padding: 10px;
   text-transform: uppercase;
+  color:rgb(255, 214, 148);
   animation: flicker 1s infinite alternate;  
 }
 
@@ -423,6 +427,23 @@
   --neon-border-color: rgb(255, 157, 0);
   --neon-blue-text-color: rgb(0, 85, 255);
   --neon-blue-border-color: rgb(0, 85, 255);
+}
+
+.rules-page {
+  text-align: center;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 20px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;
+  position: fixed;
+  top:30%;
+  left:30%;
+  right:30%;
+  bottom:30%;
 }
 
   @keyframes flicker {
