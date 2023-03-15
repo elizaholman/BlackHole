@@ -12,6 +12,69 @@
   color: #fff;
 }
 
+.rules-button{
+  position: absolute;
+  margin-left: 650px;
+  margin-top: 75px;
+  align-self: end;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 20px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 10px;
+  text-transform: uppercase;
+  color:rgb(255, 214, 148);
+  animation: flicker 1s infinite alternate;  
+}
+
+.rules-button:hover{
+  cursor: pointer;
+}
+
+.rules-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #000000a4;
+  font-style: italic;
+  font-size: 20px;
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-transform: uppercase;
+  animation: flicker 1s infinite alternate;
+  /* position: fixed;
+  top:30%;
+  left:30%;
+  right:30%;
+  bottom:30%; */
+}
+
+.rules-div{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  
+}
+
+.player1{
+  background-image: url(./images/Alien.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  padding: 50px;
+  background-position: 50% 0%;
+
+}
+.player2{
+  background-image: url(./images/Astronaut.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  padding: 50px;
+  background-position: 50% 0%;
+}
+
 .select-prompt {
   display: flex;
   flex-direction: row;
@@ -85,21 +148,6 @@
   animation: flicker 1s infinite alternate;  
 }
 
-.rules{
-  position: absolute;
-  margin-left: 650px;
-  margin-top: 75px;
-  align-self: end;
-  background: #000000a4;
-  font-style: italic;
-  font-size: 20px;
-  border: 3px solid #fff;
-  border-radius: 20px;
-  padding: 10px;
-  text-transform: uppercase;
-  color:rgb(255, 214, 148);
-  animation: flicker 1s infinite alternate;  
-}
 
 .title{
   background: #000000a4;
@@ -431,22 +479,6 @@
   --neon-blue-border-color: rgb(0, 85, 255);
 }
 
-.rules-page {
-  text-align: center;
-  background: #000000a4;
-  font-style: italic;
-  font-size: 20px;
-  border: 3px solid #fff;
-  border-radius: 20px;
-  padding: 20px;
-  text-transform: uppercase;
-  animation: flicker 1s infinite alternate;
-  position: fixed;
-  top:30%;
-  left:30%;
-  right:30%;
-  bottom:30%;
-}
 
   @keyframes flicker {
       
