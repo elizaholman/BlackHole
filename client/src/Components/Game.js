@@ -67,6 +67,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (let div of portalFlicker) {
       div.className = "tile";
     }
+    const blackholes = document.getElementsByClassName("blackhole");
+    for (let div of blackholes) {
+      div.className = "tile";
+    }
     position += roll;
     if (position > 100) {
       position -= roll;
@@ -86,6 +90,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (const hole of blackhole) {
       if (position === hole.entrance) {
         new Audio(BlackholeSound).play();
+        for (let div of divs) {
+          if (div.id === `_${position}`) {
+            div.className= "blackhole"
+          }}
         position = hole.exit;
       }
     }
@@ -102,6 +110,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
   function diceRoll2(position, portals, blackhole, roll) {
     const portalFlicker = document.getElementsByClassName("flicker");
     for (let div of portalFlicker) {
+      div.className = "tile";
+    }
+    const blackholes = document.getElementsByClassName("blackhole");
+    for (let div of blackholes) {
       div.className = "tile";
     }
     position += roll;
@@ -121,6 +133,10 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
     for (const hole of blackhole) {
       if (position === hole.entrance) {
         new Audio(BlackholeSound).play();
+        for (let div of divs) {
+          if (div.id === `_${position}`) {
+            div.className= "blackhole"
+          }}
         position = hole.exit;
       }
     }
