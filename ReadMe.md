@@ -51,7 +51,7 @@ npm run server:dev
 ***
 ## Instructions:
 ### Players
-* Create players by going to the 'players' navigation at the bottom of the screen, and sumbit the names of each player by clicking "Add Player"
+* Create players by going to the 'players' navigation at the bottom of the screen, and submit the names of each player by clicking "Add Player"
 
 * Press 'play' and select two players. The person rolling is highlighted and can roll the dice to move. Player 1 moves first (feel free to flip a coin for who is player 1)
 
@@ -61,5 +61,5 @@ npm run server:dev
 
 * Check your wins, losses, and percentage in the scoreboard
 
-* Goodluck and have fun!
+* Good luck and have fun!
 
