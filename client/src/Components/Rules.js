@@ -1,4 +1,6 @@
 import React from 'react'
+import BluePortal from "../images/BluePortal.png"
+import OrangePortal from "../images/OrangePortal.png"
 
 const Rules = () => {
   return (
@@ -13,19 +15,19 @@ const Rules = () => {
             <div className='rules-list-div'>
               <ul className='rules-list'>
                 <li>
-                  Orange portals are entrances (insert image)
+                  Orange portals are entrances <img className='portal-image' src={OrangePortal}/>
                 </li>
                 <li>
-                  Blue portals are exits (insert image)
+                  Blue portals are exits <img className='portal-image' src={BluePortal}/>
                 </li>
                 <li>
-                  Black hole is an entrance which takes you to a random exit
+                  Landing in the black hole takes you to a random exit 
                 </li>
                 <li>
                   First to 100 wins
                 </li>
                 <li>
-                  Must roll exactly 100 to win
+                  Player must roll exactly 100 to win
                 </li>
               </ul>
             </div>

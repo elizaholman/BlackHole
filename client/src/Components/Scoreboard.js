@@ -13,11 +13,11 @@ const Scoreboard = ({players}) => {
       <div className='table-div'>
         <table className='table'>
         <thead>
-          <tr className='table-heading'>
-            <th>Name</th>
-            <th>Wins</th>
-            <th>Losses</th>
-            <th>Win Percentage</th>
+          <tr>
+            <th className='table-heading'>Name</th>
+            <th className='table-heading'>Wins</th>
+            <th className='table-heading'>Losses</th>
+            <th className='table-heading'>Win Percentage</th>
           </tr>
           </thead>
           <tbody>
