@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className='homepage'>
     <Link to="/rules">
-      <button className='rules'>Rules</button>
+      <button className='rules-button'>Rules</button>
     </Link>
       <h1 className='homepage-title'>Black hole</h1>
     </div>
