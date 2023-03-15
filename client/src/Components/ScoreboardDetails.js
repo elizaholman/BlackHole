@@ -16,7 +16,7 @@ const ScoreboardDetails = ({player}) => {
     <tr className='table-row'>
         <td className='table-item'>{player.name}</td>
         <td className='table-item'>{wins}</td>
-        <td className='table-item'>{player.losses}</td>
+        <td className='table-item'>{losses}</td>
         <td className='table-item'>{winPercentage}%</td>
     </tr>
   )
