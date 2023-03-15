@@ -361,12 +361,12 @@ const Game = ({ playerOneId, playerTwoId, players, updateScore, selectPlayer, se
         <div className="tile" id="_10"></div>
       </div>
         <div className="player-wins">
-          {!showPopup1 ? <div className="win-name"><h1 >{player1.name} Wins!</h1>
+          {!showPopup1 ? <div className="win-name"><h1>{player1.name} Wins!</h1>
             <a className="link" href="/game">
               <button className="replay-button">Play Again</button>
             </a>
           </div> : null}
-          {!showPopup2 ? <div className="win-name"><h1 >{player2.name} Wins!</h1>
+          {!showPopup2 ? <div className="win-name"><h1>{player2.name} Wins!</h1>
             <a href="/game">
               <button className="replay-button">Play Again</button>
             </a>
