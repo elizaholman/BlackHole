@@ -63,3 +63,15 @@ npm run server:dev
 
 * Good luck and have fun!
 
+# Images
+_Home Screen:_
+![homepage](/pics/homepage.png)
+
+_Player Add/Delete:_
+![playerpage](/pics/players.png)
+
+_Game Screen:_
+![gamepage](/pics/game.png)
+
+_Scoreboard:_
+![scoreboard](/pics/scoreboard.png)
